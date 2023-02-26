@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF6F6;
+}
+
+@font-face {
+    font-family: 'BR-Firma';
+    src: url('./src/fonts/BR-Firma-Medium.otf') format('truetype');
+    font-style: medium;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'BR-Firma';
+    src: url('./src/fonts/BR-Firma-Bold.otf') format('truetype');
+    font-style: bold;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'BR-Firma';
+    src: url('./src/fonts/BR-Firma-Regular.otf') format('truetype');
+    font-style: regular;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'BR-Firma';
+    src: url('./src/fonts/BR-Firma-Light.otf') format('truetype');
+    font-style: light;
+    font-weight: 300;
+}
+
+.title-1{
+    font-family: 'BR-Firma';
+    font-weight: bold;
+    font-size: 3.052rem;
+}
+
+.large-title{
+    font-family: 'BR-Firma';
+    font-weight: bold;
+    font-size: 2.441rem;
+}
+
+.title-2{
+    font-family: 'BR-Firma';
+    font-weight: bold;
+    font-size: 1.953rem;
+}
+
+.headline{
+    font-family: 'BR-Firma';
+    font-weight: bold; 
+    font-size: 1.563rem;
+}
+
+.button{
+    font-family: 'BR-Firma';
+    font-weight: bold;
+    font-size: 1.10rem;
+}
+
+.txt-body{
+    font-family: 'BR-Firma';
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.subhead{
+    font-family: 'BR-Firma';
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.footnote{
+    font-family: 'BR-Firma';
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+
+:root{
+    --main-bg-color-black:#2D332F;
+    --main-bg-color-red: #FF4751;
+    --main-bg-color-purple: #5759AE;
+    --secundary-color-aquamarine: #4DC9C1;
+    --secundary-color-yellowgreen: #E0E15F;
+    --secundary-color-rose: #FF6E81;
+    --secundary-color-blue: #00B8EC;
+    --secundary-color-grey: #BAC8CB;
+    --neutral-color-one: #57716F;
+    --neutral-color-two: #C7B4B4; 
+}
+
+main{
+    margin: 0px 120px;
+}
+
+/* Estilos Nathalia */
+
+
+/* Estilos Melanie */
+
+
+/* Estilos Catalina */
