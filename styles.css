@@ -105,7 +105,7 @@ main{
 
 main{
     margin: 0px 120px;
-    background-color: aqua;
+    background-color: grey;
 }
 
 .btn-primary{
@@ -135,7 +135,7 @@ main{
 }
 
 .btn-outline-primary{
-    background-color: var(--main-bg-color-black);
+    background-color: rgba(255,255 , 255, 0);
     color: var(--neutral-color-two-900);
     border-color: var(--neutral-color-two-900);
     border-width: 2px;
@@ -143,9 +143,25 @@ main{
 }
 
 .btn-outline-primary:hover{
-    background-color: var(--neutral-color-two-900);
+    background-color: rgba(255,255 , 255, 0);
     color: var(--main-bg-color-black);
     border-color: var(--main-bg-color-black);
+    border-width: 2px;
+    border-radius: 4px;
+}
+
+.btn-outline-secondary{
+    background-color: rgba(255,255 , 255, 0);
+    color: var(--main-bg-color-black);
+    border-color: var(--main-bg-color-black);
+    border-width: 2px;
+    border-radius: 4px;
+}
+
+.btn-outline-secondary:hover{
+    background-color: rgba(255,255 , 255, 0);
+    color: var(--neutral-color-two-900);
+    border-color: var(--neutral-color-two-900);
     border-width: 2px;
     border-radius: 4px;
 }
@@ -153,7 +169,11 @@ main{
 /* Estilos Nathalia */
 
 
+
 /* Estilos Melanie */
 
 
+
 /* Estilos Catalina */
+
+
