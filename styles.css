@@ -8,6 +8,10 @@ body {
     background-color: #FFF6F6;
 }
 
+main{
+    margin: 0px 120px;
+}
+
 @font-face {
     font-family: 'BR-Firma';
     src: url('./src/fonts/BR-Firma-Medium.otf') format('truetype');
@@ -97,9 +101,7 @@ body {
     --neutral-color-two: #C7B4B4; 
 }
 
-main{
-    margin: 0px 120px;
-}
+
 
 /* Estilos Nathalia */
 
