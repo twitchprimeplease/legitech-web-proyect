@@ -95,10 +95,54 @@ body {
     --secundary-color-grey: #BAC8CB;
     --neutral-color-one: #57716F;
     --neutral-color-two: #C7B4B4; 
+    --neutral-color-two-900:#FFF8F8;
 }
 
 main{
     margin: 0px 120px;
+    background-color: aqua;
+}
+
+.btn-primary{
+    background-color: var(--main-bg-color-black);
+    color: var(--neutral-color-two-900);
+    border-color: var(--neutral-color-two-900);
+    border-width: 0px;
+}
+
+.btn-primary:hover{
+    background-color: var(--neutral-color-two-900);
+    color: var(--main-bg-color-black);
+    border-width: 0px;
+}
+
+.btn-secondary{
+    background-color: var(--neutral-color-two-900);
+    color: var(--main-bg-color-black);
+    border-color: var(--main-bg-color-black);
+    border-width: 0px;
+}
+
+.btn-secondary:hover{
+    background-color: var(--main-bg-color-black);
+    color: var(--neutral-color-two-900);
+    border-width: 0px;
+}
+
+.btn-outline-primary{
+    background-color: var(--main-bg-color-black);
+    color: var(--neutral-color-two-900);
+    border-color: var(--neutral-color-two-900);
+    border-width: 2px;
+    border-radius: 4px;
+}
+
+.btn-outline-primary:hover{
+    background-color: var(--neutral-color-two-900);
+    color: var(--main-bg-color-black);
+    border-color: var(--main-bg-color-black);
+    border-width: 2px;
+    border-radius: 4px;
 }
 
 /* Estilos Nathalia */
