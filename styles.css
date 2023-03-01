@@ -30,14 +30,14 @@ main{
     font-family: 'BR-Firma';
     src: url('./src/fonts/BR-Firma-Regular.otf') format('truetype');
     font-style: regular;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 @font-face {
     font-family: 'BR-Firma';
     src: url('./src/fonts/BR-Firma-Light.otf') format('truetype');
     font-style: light;
-    font-weight: 300;
+    font-weight: 200;
 }
 
 .title-1{
@@ -72,7 +72,7 @@ main{
 
 .txt-body{
     font-family: 'BR-Firma';
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1rem;
 }
 
@@ -84,7 +84,7 @@ main{
 
 .footnote{
     font-family: 'BR-Firma';
-    font-weight: 300;
+    font-weight: 200;
     font-size: 0.8rem;
 }
 
@@ -103,10 +103,7 @@ main{
 }
 
 
-main{
-    margin: 0px 120px;
-    background-color: grey;
-}
+
 
 .btn-primary{
     background-color: var(--main-bg-color-black);
@@ -166,14 +163,66 @@ main{
     border-radius: 4px;
 }
 
+
 /* Estilos Nathalia */
 
 
 
 /* Estilos Melanie */
+.spotlightZone {
+    display: flex;
+    padding: 16px;
+    width: 100%;
+    height: auto;
+    background-color: var(--main-bg-color-black);
+    justify-content: center;
+}
+
+.spotlightZone-content{
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    column-gap: 72px;
+}
+
+.spotlightZone-content img {
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 600px;
+    transition: all 0.3s ease;
+}
+
+.spotlightZone-content img:hover {
+    scale:110%;
+    transition: all 0.3s ease;
+}
+
+#spotlightZone-text{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    text-align: right;
+    align-items: flex-end;
+    justify-content: center;
+}
 
 
+#spotlightZone-text h2, #spotlightZone-text p{
+    color:var(--neutral-color-two-900);
+}
 
+#spotlightZone-text button{
+    max-width: 200px;
+    text-align: right;
+    border-width: 2px;
+}
+
+#spotlightZone-text button{
+    border-color:var(--neutral-color-two-900);
+}
 /* Estilos Catalina */
 
 
