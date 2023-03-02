@@ -30,14 +30,14 @@ main{
     font-family: 'BR-Firma';
     src: url('./src/fonts/BR-Firma-Regular.otf') format('truetype');
     font-style: regular;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 @font-face {
     font-family: 'BR-Firma';
     src: url('./src/fonts/BR-Firma-Light.otf') format('truetype');
     font-style: light;
-    font-weight: 300;
+    font-weight: 200;
 }
 
 .title-1{
@@ -72,7 +72,7 @@ main{
 
 .txt-body{
     font-family: 'BR-Firma';
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1rem;
 }
 
@@ -84,7 +84,7 @@ main{
 
 .footnote{
     font-family: 'BR-Firma';
-    font-weight: 300;
+    font-weight: 200;
     font-size: 0.8rem;
 }
 
@@ -100,12 +100,6 @@ main{
     --neutral-color-one: #57716F;
     --neutral-color-two: #C7B4B4; 
     --neutral-color-two-900:#FFF8F8;
-}
-
-
-main{
-    margin: 0px 120px;
-    background-color: grey;
 }
 
 .btn-primary{
@@ -167,9 +161,61 @@ main{
 }
 
 /* Estilos Nathalia */
+.container-fluid {
+    width: 100%;
+    background-color: var(--neutral-color-two-900);
+}   
+    
+header ul li {
+    list-style: none;
+}
 
+header ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #02000D;
+    transition: 0.7s;
+}
 
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 120px;
+    height: 80px;
+    line-height: 80px;
+    z-index: 111;
+}
 
+.logo img {
+    margin: 20px 0;
+    display: flex;
+    width: 120px;
+    height: auto;
+}
+
+#nav-items {
+    display: flex;
+}
+
+#nav-items li {
+    list-style: none;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+#nav-items li:hover a{
+    color: var(--secundary-color-blue);
+    font-weight: 700;
+}
+
+.front {
+    background-image: url(./src/images/natha-img/portrait.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 550px;
+}
 /* Estilos Melanie */
 
 
