@@ -9,7 +9,7 @@ body {
 }
 
 main{
-    margin: 0px 120px;
+    
 }
 
 @font-face {
@@ -214,8 +214,9 @@ nav {
 .front {
     background-image: url(./src/images/natha-img/portrait.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     height: 550px;
+    width: 100%;
 }
 /* Estilos Melanie */
 .spotlightZone {
