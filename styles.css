@@ -8,10 +8,6 @@ body {
     background-color: #FFF6F6;
 }
 
-main{
-    margin: 0px 120px;
-}
-
 @font-face {
     font-family: 'BR-Firma';
     src: url('./src/fonts/BR-Firma-Medium.otf') format('truetype');
