@@ -6,6 +6,7 @@ class spotlightZoneVibe100 extends HTMLElement{
 
     render(){
         this.innerHTML = `
+        <link rel="stylesheet" href="/src/Components/spotlightZoneVibe100/styles.css">
             <div class="spotlightZone">
                 <div class="spotlightZone-content col-8 align-items-center">
                     <img class= "col-5" src="/src/images/Mel/zone-vibe-100-gallery-graphite-2.webp">
@@ -18,7 +19,7 @@ class spotlightZoneVibe100 extends HTMLElement{
                     </div>
                 </div>
             </div>
-
+            
         `;
     }
 }
