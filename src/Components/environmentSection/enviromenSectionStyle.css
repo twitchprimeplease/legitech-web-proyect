@@ -1,10 +1,9 @@
 #enviroment-section-container{
-    margin:16px;
+    margin-left:120px;
+    margin-right:120px;
     display: flex;
-    gap: 16px;
     align-items: top;
-    justify-content: center;
-    width: 100%;
+    justify-content: space-around;
 
 }
 
@@ -14,16 +13,52 @@
 }
 
 #enviroment-section-container .card img{
-    margin-bottom: 24px;
-    scale:150%;
+    align-self: center;
+    width: 150%;
 }
 
 #enviroment-section-container .card{
     overflow: hidden;
+    display: flex;
+    width: 20%;
 }
 
 #enviroment-section-container .card:hover{
     background-color: var(--main-bg-color-black);
     color: var(--neutral-color-two-900);
+}
+
+#enviroment-section-container .card-img-container{
+    width: 100%;
+    max-height: 160px;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#enviroment-section-container .card-txt{
+    height: 40%;
+}
+
+#enviroment-section-container .btn{
+    max-width: 120px;
+    margin: 16px;
+    border-width: 1px;
+    border-color: var(--main-bg-color-black)
+}
+
+#enviroment-section-container .btn:hover{
+    background-color: var(--main-bg-color-black);
+    color: var(--neutral-color-two-900);
+    border-width: 1px;
+    border-color: var(--neutral-color-two-900)
+}
+
+#title-enviroment{
+    text-align: center;
+    margin: 60px
 
 }
+
+
