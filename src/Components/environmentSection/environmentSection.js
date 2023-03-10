@@ -20,7 +20,7 @@ class environmentSection extends HTMLElement {
                         <h5 class="card-title headline">NEXT LIFE PLASTICS</h5>
                         <p class="card-text footnote">Logitech is innovating to give plastics a second life. Today, many recycled plastic resins are limited to black or grey colors and do not perform in the same way as virgin plastic, which introduces product design challenges.</p>
                     </div>
-                    <a href="#" class="btn btn-secondary">Learn More</a>
+                    <a href="#" class="btn btn-secondary">LEARN MORE</a>
                 </div>
 
                 <div class="card" style="width: 18rem;">
@@ -31,7 +31,7 @@ class environmentSection extends HTMLElement {
                         <h5 class="card-title headline">FUTURE POSITIVE CHALLENGE</h5>
                         <p class="card-text footnote">A technology and engineering challenge for disruptors who have a desire to make a meaningful contribution to a positive future.</p>
                     </div>
-                    <a href="#" class="btn btn-secondary">Learn More</a>
+                    <a href="#" class="btn btn-secondary">LEARN MORE</a>
                 </div>
 
                 <div class="card" style="width: 18rem;">
@@ -42,7 +42,7 @@ class environmentSection extends HTMLElement {
                         <h5 class="card-title headline">CLIMATE POSITIVE</h5>
                         <p class="card-text footnote">We’re taking action to help shape a climate positive future.On behalf of future generations, we have to act right now.</p>
                     </div>
-                    <a href="#" class="btn btn-secondary">Learn More</a>
+                    <a href="#" class="btn btn-secondary">LEARN MORE</a>
                 </div>
                 </div>
         `;

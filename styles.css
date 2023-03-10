@@ -98,6 +98,12 @@ body {
     --neutral-color-two-900:#FFF8F8;
 }
 
+.btn{
+    font-family: 'BR-Firma';
+    font-weight: bold;
+    font-size: 1.10rem;
+}
+
 .btn-primary{
     background-color: var(--main-bg-color-black);
     color: var(--neutral-color-two-900);
