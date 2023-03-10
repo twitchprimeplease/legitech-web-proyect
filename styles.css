@@ -239,7 +239,7 @@ nav {
     text-transform: uppercase;
     padding-top: 12%;
     margin: 0 120px;
-    color: var(--main-bg-color-black);
+    color: var(--neutral-color-two-900);
 }
 
 .wrap-text h4 {
@@ -397,6 +397,116 @@ nav {
     opacity: 1;
 }
 
+#containt-1 {
+    height: 80vh;
+    margin: 0 120px 0 120px;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: center;
+    color: var(--main-bg-color-purple);
+}
+
+#containt-1 img{
+    height: 500px;
+    transition: all 2s linear;
+}
+
+#containt-1 img:hover{
+    transform: scale(1.3);
+}
+
+#containt-1 h1, #containt-1 p{
+    padding-left: 160px;
+}
+
+#containt-1 p {
+    color: var(--main-bg-color-black);
+}
+
+figure {
+    height: 500px;
+    overflow: hidden;
+}
+
+.img-config {
+    width: 50% !important;
+}
+
+.img-config > img {
+    width: 100%;
+}
+
+.text-edit {
+    width: 50%;
+}
+
+.text-edit button{
+    background-color: var(--secundary-color-blue);
+    color: var(--neutral-color-two-900);
+    max-width: 200px;
+    border-width: 2px;
+    padding: 12px 24px;
+    margin: 5px 0 0 160px;
+}
+
+.text-edit button:hover{
+    color: var(--secundary-color-blue);
+    max-width: 200px;
+    border-width: 2px;
+    border-color: var(--secundary-color-blue);
+    padding: 12px 24px;
+    margin: 5px 0 0 160px;
+}
+
+#containt-2 {
+    margin: 0 120px 0 120px;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: center;
+    color: var(--main-bg-color-purple);
+}
+
+#containt-2 img{
+    height: 500px;
+    transition: all 2s linear;
+}
+
+#containt-2 img:hover{
+    transform: scale(1.3);
+}
+
+#containt-2 h1, #containt-2 p{
+    padding-right: 160px;
+}
+
+#containt-2 p {
+    color: var(--main-bg-color-black);
+}
+
+.containt-edit {
+    width: 50%;
+}
+
+.containt-edit button{
+    background-color: var(--secundary-color-blue);
+    color: var(--neutral-color-two-900);
+    max-width: 200px;
+    border-width: 2px;
+    padding: 12px 24px;
+    margin: 5px 160px 0 0;
+}
+
+.containt-edit button:hover{
+    color: var(--secundary-color-blue);
+    max-width: 200px;
+    border-width: 2px;
+    border-color: var(--secundary-color-blue);
+    padding: 12px 24px;
+    margin: 5px 160px 0 0;
+}
 
 /* Estilos Melanie */
 
