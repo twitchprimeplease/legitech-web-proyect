@@ -36,9 +36,6 @@ let multipleCardCarousel = document.querySelector(
   }
 
   var swiper = new Swiper(".mySwiper", {
-    autoplay: {
-      delay: 4000,
-    },
     pagination: {
       el: ".swiper-pagination",
     },
@@ -47,8 +44,8 @@ let multipleCardCarousel = document.querySelector(
   
   const txts=document.querySelector(".slide-text").children,
         txtsLen=txts.length;
-   let index=0;
-   const textInTimer=3000,
+        let index=0;
+        const textInTimer=3000,
           textOutTimer=3200;
 
   function animateText() {
