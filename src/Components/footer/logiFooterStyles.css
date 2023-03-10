@@ -1,0 +1,30 @@
+.logi-footer {
+
+    padding: 0px 120px;
+    background-color: var(--main-bg-color-black);
+    color: var(--neutral-color-two-900);
+}
+
+.logi-footer a{
+    color: var(--neutral-color-two-900) !important;
+}
+
+.logi-footer a:hover{
+    text-decoration: underline;
+}
+
+.logi-footer button{
+    background-color: var(--secundary-color-blue);
+    color: var(--main-bg-color-black)
+}
+
+#footer-logo{
+    display:flex;
+    justify-content: center ;
+    margin-bottom: 3rem;
+}
+
+#footer-logo img{
+    max-width: 200px;
+
+}
