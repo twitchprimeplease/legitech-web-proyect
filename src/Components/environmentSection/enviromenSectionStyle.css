@@ -1,6 +1,7 @@
 #enviroment-section-container{
     margin-left:120px;
     margin-right:120px;
+    margin-bottom: 100px;
     display: flex;
     align-items: top;
     justify-content: space-around;
@@ -14,13 +15,14 @@
 
 #enviroment-section-container .card img{
     align-self: center;
+    object-fit: cover;
     width: 150%;
 }
 
 #enviroment-section-container .card{
     overflow: hidden;
     display: flex;
-    width: 20%;
+    width: 22rem !important;
 }
 
 #enviroment-section-container .card:hover{
@@ -37,12 +39,12 @@
     justify-content: center;
 }
 
-#enviroment-section-container .card-txt{
+/* #enviroment-section-container .card-txt{
     height: 40%;
 }
-
+ */
 #enviroment-section-container .btn{
-    max-width: 120px;
+    max-width: 150px;
     margin: 16px;
     border-width: 1px;
     border-color: var(--main-bg-color-black)

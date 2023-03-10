@@ -1,5 +1,5 @@
 .logi-footer {
-    margin-top: 100px;
+
     padding: 0px 120px;
     background-color: var(--main-bg-color-black);
     color: var(--neutral-color-two-900);
@@ -16,4 +16,15 @@
 .logi-footer button{
     background-color: var(--secundary-color-blue);
     color: var(--main-bg-color-black)
+}
+
+#footer-logo{
+    display:flex;
+    justify-content: center ;
+    margin-bottom: 3rem;
+}
+
+#footer-logo img{
+    max-width: 200px;
+
 }
