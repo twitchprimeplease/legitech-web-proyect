@@ -9,23 +9,23 @@ class galleryMasterSeries extends HTMLElement{
         <link rel="stylesheet" href="/src/Components/galleryMasterSeries/styles.css">
         <section class="master-series-section">
             <article class="master-series-gallery">
-                <figure class="gallery-img gallery-img-1">
+                <figure class="gallery-img-1">
                     <img src="src/images/Mel/mx-keys-mini-top-mac-us.webp" alt="">
                 </figure>
 
-                <figure class="gallery-img gallery-img-2">
+                <figure class="gallery-img-2">
                     <img src="src/images/Mel/mx-anywhere-3-for-mac-product-gallery-pale-gray-top.webp" alt="">
                 </figure>
 
-                <figure class="gallery-img gallery-img-3">
+                <figure class="gallery-img-3">
                     <img src="src/images/Mel/mx-master-3s-for-mac-mouse-top-view-pale-grey.webp" alt="">
                 </figure>
 
-                <figure class="gallery-img gallery-img-4">
+                <figure class="gallery-img-4">
                     <img src="src/images/Mel/mx-master-3s-mouse-top-view-black.webp" alt="">
                 </figure>
 
-                <figure class="gallery-img gallery-img-5">
+                <figure class="gallery-img-5">
                     <img src="src/images/Mel/mx-vertical-features-06.webp" alt="">
                 </figure>
             </article>
@@ -38,6 +38,7 @@ class galleryMasterSeries extends HTMLElement{
             </aside>
         </section>
         `
+    console.log("audia")
     }
 }
 //reference https://www.logitech.com/es-roam/mx/master-series.html
