@@ -164,64 +164,36 @@ body {
 
 
 /* Estilos Nathalia */
-.container-fluid {
-    width: 100%;
-    background-color: var(--neutral-color-two-900);
-}   
-    
-header ul li {
-    list-style: none;
-}
 
-header ul li a{
-    position: relative;
-    margin: 0 15px;
-    text-decoration: none;
-    color: var(--main-bg-color-black);
-    transition: 0.7s;
-}
-
-nav {
+.navbar {
     display: flex;
-    width: 100%;
+    align-items: center;
     justify-content: space-between;
-    padding: 15px 120px;
-    height: 80px;
-    line-height: 80px;
-    z-index: 111;
-    margin-bottom: 1%;
+    padding-top: 2%;
 }
 
-.nav-icon button{
-    background-color: var(--main-bg-color-black);
-    color: var(--neutral-color-two-900);
-    border-width: 2px;
-    font-weight: normal;
-    padding: 8px 16px;
-}
-
-.logo img {
-    margin: 20px 0;
-    display: flex;
+.navbar-brand img {
     width: 120px;
     height: auto;
 }
 
-#nav-items {
-    display: flex;
-}
-
-#nav-items li {
-    list-style: none;
+.nav-link {
+    align-items: center;
+    color: var(--main-bg-color-black);
     margin: 0 15px;
-    text-decoration: none;
 }
 
-#nav-items li:hover a{
+.nav-link:hover {
     color: var(--secundary-color-aquamarine);
-    border-bottom: 4px solid var(--secundary-color-aquamarine);
 }
 
+.btn-nav button {
+    background-color: var(--main-bg-color-black);
+    color: var(--neutral-color-two-900);
+    max-width: 200px;
+    border-width: 2px;
+    padding: 15px 32px;
+}
 
 .wrap-1 {
     background-image: url(./src/images/natha-img/portrait.jpg);
