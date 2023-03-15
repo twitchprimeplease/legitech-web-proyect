@@ -26,7 +26,7 @@ class galleryMasterSeries extends HTMLElement{
                 </figure>
 
                 <figure class="gallery-img-5">
-                    <img src="src/images/Mel/mx-vertical-features-06.webp" alt="">
+                    <img src="src/images/Mel/mx-anywhere-3-product-gallery-rose-rear.webp" alt="">
                 </figure>
             </article>
             <aside class="gallery-aside">

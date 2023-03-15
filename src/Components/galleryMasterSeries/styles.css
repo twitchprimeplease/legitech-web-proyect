@@ -42,7 +42,6 @@
 
 .master-series-section .master-series-gallery img{
 object-fit: cover;
-padding: 10px;
 width: 100%;
 height: 100%;
     border-radius: 10px;
@@ -84,7 +83,32 @@ height: 100%;
     grid-column: 3/4; 
     grid-row: 3/4;
     border-radius: 10px;
-    background-color: var(--secundary-color-grey);
+    background-color: var(--secundary-color-aquamarine)
 }
 
+@media (max-width:768px){
+    .master-series-section{
+        padding: 24px;
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 16px;
+    }
 
+    .master-series-section .master-series-gallery{
+        width: 100%;
+        max-height: 400px;
+    }
+
+    .master-series-section .master-series-gallery img{
+/*         object-fit: scale-down; */
+        padding: 0px;
+
+        }
+
+    .master-series-section aside {
+        text-align: center;
+        max-width: 300px;
+        margin: 24px 12px;
+        align-items: center;
+    }
+}
