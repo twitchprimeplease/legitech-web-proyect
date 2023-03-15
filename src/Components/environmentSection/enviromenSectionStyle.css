@@ -25,6 +25,7 @@
     overflow: hidden;
     display: flex;
     width: 22rem !important;
+    background-color: none;
 }
 
 #enviroment-section-container .card:hover{
@@ -64,6 +65,11 @@
     margin: 60px
 
 }
+@media(min-width:768px) {
+    #enviroment-section-mobile{
+        display: none;
+    }
+}
 
 @media(max-width: 768px){
 
@@ -72,7 +78,36 @@
         align-items: top;
         flex-direction: column;
         width: 100%;
-        row-gap: 8px;
+        row-gap: 24px;
+        padding: 24px;
+        margin:0px;
+        justify-content: center;
+    }
+
+    #enviroment-section-container .card{
+        overflow: hidden;
+        display: flex;
+        width: 100% !important;
+        align-items: center;
+        background-color: none;
+    }
+
+    #title-enviroment{
+        width: 100%;
+        padding:24px;
+        margin: 0px;
+        margin-top: 32px;
+    }
+
+    #title-enviroment .title-1{
+        font-size: 2rem;
+    }
+
+    #enviroment-section-container .btn {
+        max-width: 150px;
+        margin: 16px;
+        border-width: 1px;
+        border-color: var(--main-bg-color-black);
     }
 
 }
