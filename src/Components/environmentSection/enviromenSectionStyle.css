@@ -1,3 +1,4 @@
+
 #enviroment-section-container{
     margin-left:120px;
     margin-right:120px;
@@ -7,6 +8,7 @@
     justify-content: space-around;
 
 }
+
 
 #enviroment-section-container .headline{
     font-size: 1.4rem;
@@ -60,6 +62,18 @@
 #title-enviroment{
     text-align: center;
     margin: 60px
+
+}
+
+@media(max-width: 768px){
+
+    #enviroment-section-container{
+        display: flex;
+        align-items: top;
+        flex-direction: column;
+        width: 100%;
+        row-gap: 8px;
+    }
 
 }
 

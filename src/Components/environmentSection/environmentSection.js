@@ -7,6 +7,7 @@ class environmentSection extends HTMLElement {
     render() {
         this.innerHTML = `
             <link rel="stylesheet" href="/src/Components/environmentSection/enviromenSectionStyle.css">
+            <div id="enviroment-section-deskop">
             <div id="title-enviroment">
                 <h2 class="title-1">Our commitment to the Environment</h2>
             </div>
@@ -45,6 +46,10 @@ class environmentSection extends HTMLElement {
                     <a href="#" class="btn btn-secondary">LEARN MORE</a>
                 </div>
                 </div>
+            </div>
+           <div id="enviroment-section-mobile">
+                <h2>If he wasn't enough, he was going to become enough</h2>
+           </div>
         `;
     }
 }
