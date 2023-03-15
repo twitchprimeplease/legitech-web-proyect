@@ -3,14 +3,13 @@
     padding: 16px;
     width: 100%;
     height: auto;
-    background-color: var(--main-bg-color-black);
+    background: linear-gradient(to bottom right, var(--main-bg-color-black), black);
     justify-content: center;
 }
 
 .spotlightZone-content{
     display: flex;
     flex-direction: row;
-/*     align-items: space-between; */
     column-gap: 72px;
     margin: 0px 120px;
     width: 100%;
@@ -52,4 +51,35 @@
 
 #spotlightZone-text button{
     border-color:var(--neutral-color-two-900);
+}
+
+@media (max-width:768px) {
+    .spotlightZone{
+        margin: 0px;
+        padding: 24px 0px;
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(var(--main-bg-color-black), black);
+    }
+    .spotlightZone img{
+        width: 100%;
+        height: auto;
+    }
+
+    .spotlightZone-content{
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-content: center;
+    }
+
+    #spotlightZone-text{
+        width: 100%;
+        flex-direction:column;
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
 }
