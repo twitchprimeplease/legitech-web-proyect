@@ -38,7 +38,6 @@ class galleryMasterSeries extends HTMLElement{
             </aside>
         </section>
         `
-    console.log("audia")
     }
 }
 //reference https://www.logitech.com/es-roam/mx/master-series.html
