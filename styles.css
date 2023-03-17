@@ -654,7 +654,7 @@ figure {
 }
 .products {
     display: flex;
-    font-size: 200%;
+    font-size: 125%;
     opacity: 1;
     justify-content: center;
     padding-top: 3%;
@@ -848,6 +848,10 @@ padding: 0px;
 margin-top: 10%;
 width: 207.46px;
 height: 25.46px;
+}
+
+.success{
+    color: #44468D;
 }
 
 #osiosi{
@@ -1052,6 +1056,9 @@ height: 70px;
         object-fit: cover;
       }
 
+
+
+
       #section-5{
   
         padding-bottom: 10%;
@@ -1109,6 +1116,268 @@ height: 70px;
     }
 
 
+
+
+
+    #section-8{
+       padding-top: 15%;
+      padding-bottom: 15%;
+      margin: 0 0%;
+      gap: 50px;
+      }
+      
+      .textimo{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+      gap: 25px;
+      
+      
+      }
+      
+      
+      .textosli{
+          display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0px;
+      gap: 16px;
+      
+      width: 335px;
+      height: 322px;
+      }
+      
+      .parteuno{
+          display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0px;
+      gap: 6px;
+      
+      width: 335px;
+      height: 283px;
+      
+      }
+      
+      .iconoto{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        margin-left: 30%;
+        width: 150px;
+        height: 150px;
+        
+      }
+      
+      .textitos{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+      gap: 60px;
+      font-size: small;
+      
+      }
+      
+      .titular{
+        width: 259px;
+        height: 87px;
+        font-weight: 700;
+       line-height: 29px;
+       text-align: center;
+       letter-spacing: -0.005em;
+      }
+
+      .parrafito{
+        width: 246px;
+        height: 208px;
+font-size: 18px;
+line-height: 20px;
+text-align: center;
+letter-spacing: -0.005em;
+      }
+      .partedos{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 11.36px;
+      gap:7.1px;
+      
+      
+      width: 343px;
+      height: 23px;
+      }
+      
+      
+      .linksito{
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+      gap: 6.39px;
+      position: absolute;
+      top: 1085%;
+     
+      }
+
+
+      .success{
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 25px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.005em;
+color: #44468D;
+
+      }
+      
+      #osiosi{
+          list-style: none;
+          text-decoration: none;
+      }
+      #osiosi :hover {
+          color: var(--secundary-color-aquamarine);
+          border-bottom: 4px solid var(--secundary-color-aquamarine);
+      }
+      
+      .gamer .img-wripper {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+      padding: 0px;
+   
+width: 100%;
+
+padding-top: 90%;
+    
+      }
+      
+      .gamer img {
+          max-height: 100%;
+          
+        }
+      
+      @media (max-width: 768px) {
+          .gamer .img-wripper {
+            height: auto;
+          }
+      }
+      
+      .testoo {
+          color: var(--neutral-color-two-900);
+          font-style: var(--main-bg-color-black);
+          transition: .5s ease;
+          opacity: 100%;
+          align-content: flex-start;
+          transform: none;
+          text-align:center;
+          justify-content: flex-start;
+          margin-top: -180px;
+          line-height: 23px;
+          position:absolute;
+
+      }
+      
+      
+      
+      .gamer:hover .textoentestimonio {
+          opacity: 0.3;
+      }
+        
+      
+      .gamer:hover .testoo {
+          opacity: 1;
+          color: var(--main-bg-color-purple);
+      }
+      
+      
+
+      #section-9{
+        padding-top: 0%;
+      padding-bottom: 30%;
+      margin: 0 320px;
+      gap:125px;
+      margin-left: 20%;
+    
+    
+      
+      }
+    
+      .ultimotitulo{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 78px;
+    
+    position: absolute;
+    width: 808px;
+    height: 744px;
+    left: -209px;
+    top: 44px;
+    
+      }
+    
+    .branditas{
+     display: flex;
+     flex-direction: row;
+     margin-left: 30%;
+    align-items:flex-start;
+    padding: 10px;
+    gap: 10px;
+    
+    width: 235px;
+    height: 60px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -0.005em;
+      }
+    
+    .logos{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    gap: 15px;
+    
+    width: 808px;
+    height: 606px;
+    
+    }
+    
+    .fila1{
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding-right: 70%;
+    
+    }
+    
+    .fila2{
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding-right: 70%;
+    
+  
+    }
+    
 
 }
 
