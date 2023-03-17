@@ -1222,8 +1222,7 @@ letter-spacing: -0.005em;
       align-items: center;
       padding: 0px;
       gap: 6.39px;
-      position: absolute;
-      top: 1085%;
+    
      
       }
 
@@ -1256,10 +1255,11 @@ color: #44468D;
           justify-content: center;
           align-items: center;
       padding: 0px;
+      
    
 width: 100%;
 
-padding-top: 90%;
+
     
       }
       
@@ -1271,6 +1271,14 @@ padding-top: 90%;
       @media (max-width: 768px) {
           .gamer .img-wripper {
             height: auto;
+          }
+
+          .textosli{
+            height: 700px;
+          }
+
+          .partedos{
+            margin-top: 340px;
           }
       }
       
