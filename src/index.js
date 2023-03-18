@@ -41,7 +41,7 @@ let multipleCardCarousel = document.querySelector(
     },
   });
 
-  
+
   const txts=document.querySelector(".slide-text").children,
         txtsLen=txts.length;
         let index=0;
@@ -59,7 +59,7 @@ let multipleCardCarousel = document.querySelector(
       },textOutTimer)
 
       setTimeout(function() {
-          
+
       if(index == txtsLen-1) {
           index=0;
       }
@@ -67,7 +67,7 @@ let multipleCardCarousel = document.querySelector(
           index++;
       }
       animateText();
-      },textOutTimer);   
+      },textOutTimer);
   }
 
   window.onload=animateText;

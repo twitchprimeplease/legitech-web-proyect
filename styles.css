@@ -170,6 +170,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 .navbar-brand img {
@@ -192,47 +193,33 @@ body {
     color: var(--neutral-color-two-900);
     max-width: 200px;
     border-width: 2px;
-    padding: 15px 32px;
+    padding: 12px 18px;
 }
 
-.wrap-1 {
-    background-image: url(./src/images/natha-img/portrait.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    justify-content: center;
-    align-items: center;
-    height: 670px;
-    width: 100%;
+.carou-item {
+    height: 580px;
 }
 
-.wrap-text {
-    text-align: left;
+.carou-img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.section-1 .wrap-text p, .wrap-text span {
     text-transform: uppercase;
-    padding-top: 12%;
-    margin: 0 120px;
-    color: var(--neutral-color-two-900);
-}
-
-.wrap-text h4 {
-    margin-top: 4%;
-    margin-bottom: 2%;
-    letter-spacing: 4px;
-}
-
-#section-1 .wrap-text p span {
-    color: var(--main-bg-color-purple);
+    color: var(--secundary-color-blue);
     display: inline-block;
     line-height: 30px;
     display: none;
 }
 
-#section-1 .wrap-text p span.text-in {
+.section-1 .wrap-text p, .wrap-text span.text-in {
     display: block;
     animation: textIn .5s ease;
 }
 
-#section-1 .wrap-text p span.text-out {
+.section-1 .wrap-text p, .wrap-text span.text-out {
     animation: textOut .5s ease;
 }
 
@@ -288,85 +275,28 @@ body {
     justify-content: center;
 }
 
-#pop-images img:hover {
+.pop-images img:hover {
     transform:scale(1.3);
 }
 
-.carousel-inner {
-    padding: 7em;
-}
-
-.pop-card {
-    background-color: var(--secundary-color-aquamarine);
-    margin: 0 0.7em;
-    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-    border: none;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    margin-left: 20px;
-    margin-right: 20px;
-    background-color: var(--neutral-color-one);
-    width: 6vh;
-    height: 6vh;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-@media (min-width: 768px) {
-    .carousel-item {
-      margin-right: 0;
-      flex: 0 0 33.333333%;
-      display: block;
-    }
-    .carousel-inner {
-      display: flex;
-    }
-}
-
-.pop-card .img-wrapper {
-    max-width: 100%;
-    height: 23em;
+#containt-3 {
+    height: 80vh;
+    margin: 0 6% 0 6%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    text-align: left;
     align-items: center;
+    color: var(--main-bg-color-purple);
 }
 
-.pop-card img {
-    max-height: 100%;
-  }
-
-@media (max-width: 767px) {
-    .card .img-wrapper {
-      height: 17em;
-    }
+#containt-3 img{
+    height: 100%;
+    width: 100%;
+    transition: all 2s linear;
 }
 
-.middle {
-    color: var(--neutral-color-two-900);
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.pop-card-button button {
-    padding: 10px 16px;
-}
-
-.pop-card:hover .pop-img {
-    opacity: 0.3;
-}
-  
-
-.pop-card:hover .middle {
-    opacity: 1;
+#containt-3 img:hover{
+    transform: scale(1.3);
 }
 
 #containt-1 {
@@ -380,7 +310,7 @@ body {
 }
 
 #containt-1 img{
-    height: 500px;
+    max-height: 500px;
     transition: all 2s linear;
 }
 
@@ -402,7 +332,7 @@ figure {
 }
 
 .img-config {
-    width: 50% !important;
+    width: 90% !important;
 }
 
 .img-config > img {

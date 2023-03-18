@@ -7,9 +7,9 @@
     <title>Logitech</title>
     <link  rel="icon"   href="./src/images/logi-logo.jpg" type="image/jpg" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Nathalia -->
@@ -38,7 +38,7 @@
               </li>
             </ul>
             <div class="btn-nav">
-            <button type="button" class="btn btn-outline-primary btn-lg button">GET STARTED</button>
+            <button type="button" class="btn btn-outline-primary button">GET STARTED</button>
             </div>
         </div>
         </div>
@@ -49,30 +49,38 @@
     <main>
 
         <!-- Nathalia -->
-        <section id="section-1">
-                <div class="wrap-1">
-                    <div class="wrap-text">
-                        <h1 class="title-1">highlight your</h1>
-                            <p class="slide-text title-1">
-                                <span>personality</span>
-                                <span>style</span>
-                                <span>experience</span>
-                                <span>space</span>
-                            </p>
-                        <h4 class="txt-body">take your setup to another level</h4>
+        <section class="section-1">
+            <div id="principal-carousel" class="carousel-first" data-bs-ride="carousel">
+                <div class="carousel-inner detail">
+                    <div class="carousel-item active carou-item">
+                    <img src="src/images/natha-img/port.jpg" class="d-block w-100 carou-img">
+                    <div class="carousel-caption top-0 mt-4">
+                        <p class="title-2" style="padding-top:4.5rem">MAKE IT YOURS</p>
+                        <h1 class="title-1">HIGHLIGHT YOUR</h1>
+                        <div class="wrap-text top-0 mt-4">
+
+                        <p class="slide-text title-1 top-0">
+                            <span>personality</span>
+                            <span>style</span>
+                            <span>experience</span>
+                            <span>space</span>
+                        </p>
+
+                        </div>
+                      <button class="btn-primary px-4 py-2 fs-5 mt-5 button" style="margin-top: 3rem;">VIEW MORE</button>
                     </div>
-                    <div class=btn-up>
-                        <button type="button" class="btn btn-outline-secondary btn-lg button">VIEW MORE</button>
                     </div>
                 </div>
+            </div>
         </section>
+
         <section id="section-2">
             <h1 class="title-1">MEET OUR NEW CATALOG</h1>
             <h2 class="title-2">POP MOUSE/KEYS</h2>
-            <div id="pop-images">
-                <img src="src/images/natha-img/pop-emoji-daydream.jpg" alt="">
-                <img src="src/images/natha-img/pop-emoji-blast.jpg" alt="">
-                <img src="src/images/natha-img/pop-emoji-heartbreaker.jpg" alt="">
+            <div class="pop-images text-center">
+                <img src="src/images/natha-img/pop-emoji-daydream.jpg" class="img-fluid" width="30%" height="30%">
+                <img src="src/images/natha-img/pop-emoji-blast.jpg" class="img-fluid" width="30%" height="30%">
+                <img src="src/images/natha-img/pop-emoji-heartbreaker.jpg" class="img-fluid" width="30%" height="30%">
             </div>
             <div id="pop-carousel" class="carousel" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -154,7 +162,19 @@
                 </button>
             </div>
         </section>
+
+
         <article id="article-1">
+            <div id="containt-3" class="container col-12 row">
+                <div class="col-md-6">
+                    <figure class="img-config">
+                        <img src="src/images/natha-img/setup.jpg" alt="">
+                    </figure>
+                </div>
+
+            </div>
+
+
             <div id="containt-1">
                 <figure class="img-config">
                     <img src="src/images/natha-img/setup.jpg" alt="">
@@ -162,20 +182,20 @@
                 <aside class="text-edit">
                     <div>
                     <h1 class="title-2">POP HIGHLIGHTS YOUR PERSONALITY</h1>
-                    <p class="txt-body">Own your space with the right accessories to take your productivity and style to new levels. 
-                        Discover POP Mouse, StreamCam, G733 and Logitech Desk Mat.</p> 
+                    <p class="txt-body">Own your space with the right accessories to take your productivity and style to new levels.
+                        Discover POP Mouse, StreamCam, G733 and Logitech Desk Mat.</p>
                     </div>
                     <button type="button" class="btn btn-primary btn-lg button">VIEW MORE</button>
                 </aside>
             </div>
-            
+
             <div id="containt-2">
                 <aside class="containt-edit">
                     <div>
                     <h1 class="title-2">PERSONALITY THAT POPS</h1>
-                    <p class="txt-body">Unleash personality onto your deskspace and beyond with POP Keys. 
-                        Together with a matching POP Mouse, let your true self shine with a statement 
-                        desktop aesthetic and fun customizable emoji keys.</p> 
+                    <p class="txt-body">Unleash personality onto your deskspace and beyond with POP Keys.
+                        Together with a matching POP Mouse, let your true self shine with a statement
+                        desktop aesthetic and fun customizable emoji keys.</p>
                     </div>
                     <button type="button" class="btn btn-primary btn-lg button">VIEW MORE</button>
                 </aside>
@@ -355,20 +375,23 @@
             </div>
 
         </section>
-    
+
     </main>
 
     <!-- Melanie -->
     <footer></footer>
-   
-    
-    
+
+
+
     <logi-footer></logi-footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script type="module" src="/src/index.js"></script>
-    <link rel="stylesheet" href="styles.css">
+
+
 
 </body>
 </html>
