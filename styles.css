@@ -447,6 +447,18 @@ body {
         text-align: center;
     }
 
+    .article-0 {
+        display: flex;
+        justify-content: center;
+    }
+
+    #body-arti{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        margin-bottom: 16px;
+    }
+
 }
 
 /* Estilos Melanie */
