@@ -9,7 +9,7 @@ class environmentSection extends HTMLElement {
             <link rel="stylesheet" href="/src/Components/environmentSection/enviromenSectionStyle.css">
             <div id="enviroment-section-deskop">
             <div id="title-enviroment">
-                <h2 class="title-1">Our commitment to the Environment</h2>
+                <h2 class="title-1">OUR COMMINTMENT TO THE ENVIROMENT</h2>
             </div>
 
             <div id="enviroment-section-container">
@@ -47,9 +47,7 @@ class environmentSection extends HTMLElement {
                 </div>
                 </div>
             </div>
-           <div id="enviroment-section-mobile">
-                <h2>If he wasn't enough, he was going to become enough</h2>
-           </div>
+
         `;
     }
 }

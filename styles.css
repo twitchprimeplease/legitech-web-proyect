@@ -464,10 +464,7 @@ body {
         -webkit-text-size-adjust: none;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
     }
-    html,
-    body {
-        font-family: sans-serif
-    }
+
     body,
     div,
     dl,
@@ -587,6 +584,10 @@ body {
 /* Estilos Catalina */
 
 
+
+
+@media (min-width: 769px) {
+    
 #section-4{
   
     padding-bottom: 1%;
@@ -594,7 +595,7 @@ body {
 }
 .products {
     display: flex;
-    font-size: 30px;
+    font-size: 125%;
     opacity: 1;
     justify-content: center;
     padding-top: 3%;
@@ -624,7 +625,7 @@ body {
 }
 
 .swiper img {
-    height: 10px;
+    height: 20%;
     transition: all 0.5s linear;
 
   }
@@ -652,9 +653,6 @@ body {
 
 
 
-
-
-  
   #section-5{
   
     padding-bottom: 8%;
@@ -707,6 +705,10 @@ body {
     padding:0px;
 gap:0px;
 }
+
+
+
+
 
 #section-8{
   padding-top: 5%;
@@ -789,6 +791,10 @@ width: 207.46px;
 height: 25.46px;
 }
 
+.success{
+    color: #44468D;
+}
+
 #osiosi{
     list-style: none;
     text-decoration: none;
@@ -838,6 +844,10 @@ height: 25.46px;
     opacity: 1;
     color: var(--main-bg-color-purple);
 }
+
+
+
+
 
 
 #section-9{
@@ -915,6 +925,414 @@ gap: 32px;
 width: 808px;
 height: 70px;
 }
+
+
+}
+
+@media (max-width: 768px) {
+/*MOVILES*/
+    
+#section-4{
+  
+    padding-bottom: 20%;
+
+}
+
+
+    .products {
+        display: flex;
+        font-size: 35px;
+        opacity: 1;
+        justify-content: center;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        text-align: center;
+    
+    }
+    
+    
+    
+    .container-pro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    
+.unito, .dosito {
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 2%;
+  }
+  
+  
+    
+    .swiper img {
+        height: 70px;
+        transition: all 0.5s linear;
+    
+      }
+    
+      .swiper img:hover {
+        transform: scale(1.04);
+    
+      }
+    
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #ffffff00;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+
+
+
+      #section-5{
+  
+        padding-bottom: 10%;
+    
+    
+    }
+    
+    .image-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+       
+    }
+    
+    .card1{
+        display: flex;
+        flex-direction: column;
+       border-radius: 8.11507px;
+       width: auto;
+       background-color: #ffffff;
+       box-shadow:0px 8px 12px 6px rgba(121, 122, 190, 0.15), 0px 4px 4px rgba(121, 122, 190, 0.15);
+       height: auto;
+       margin-top:8% ;
+       padding-left: 7%;
+       padding-right: 7%;
+       padding-top: 2%;
+       padding-bottom: 2%;
+    }
+    
+    .card-body1{
+        display:flex;
+        flex-direction: column;
+        align-items: space-between;
+        
+    }
+    
+    .card1 img {
+        width: 100%;
+        object-fit: contain;
+        border-radius: 8px;
+    }
+    
+    .card-title{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        gap: 72px;
+        
+    }
+    
+    .card-text{
+        padding:0px;
+    gap:0px;
+    }
+
+
+
+
+
+    #section-8{
+       padding-top: 15%;
+      padding-bottom: 15%;
+      margin: 0 0%;
+      gap: 50px;
+      }
+      
+      .textimo{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+      gap: 25px;
+      
+      
+      }
+      
+      
+      .textosli{
+          display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0px;
+      gap: 16px;
+      
+      width: 335px;
+      height: 322px;
+      }
+      
+      .parteuno{
+          display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0px;
+      gap: 6px;
+      
+      width: 335px;
+      height: 283px;
+      
+      }
+      
+      .iconoto{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        margin-left: 30%;
+        width: 150px;
+        height: 150px;
+        
+      }
+      
+      .textitos{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+      gap: 60px;
+      font-size: small;
+      
+      }
+      
+      .titular{
+        width: 259px;
+        height: 87px;
+        font-weight: 700;
+       line-height: 29px;
+       text-align: center;
+       letter-spacing: -0.005em;
+      }
+
+      .parrafito{
+        width: 246px;
+        height: 208px;
+font-size: 18px;
+line-height: 20px;
+text-align: center;
+letter-spacing: -0.005em;
+      }
+      .partedos{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 11.36px;
+      gap:7.1px;
+      
+      
+      width: 343px;
+      height: 23px;
+      }
+      
+      
+      .linksito{
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+      gap: 6.39px;
+    
+     
+      }
+
+
+      .success{
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 25px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.005em;
+color: #44468D;
+
+      }
+      
+      #osiosi{
+          list-style: none;
+          text-decoration: none;
+      }
+      #osiosi :hover {
+          color: var(--secundary-color-aquamarine);
+          border-bottom: 4px solid var(--secundary-color-aquamarine);
+      }
+      
+      .gamer .img-wripper {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+      padding: 0px;
+      
+   
+width: 100%;
+
+
+    
+      }
+      
+      .gamer img {
+          max-height: 100%;
+          
+        }
+      
+      @media (max-width: 768px) {
+          .gamer .img-wripper {
+            height: auto;
+          }
+
+          .textosli{
+            height: 700px;
+          }
+
+          .partedos{
+            margin-top: 340px;
+          }
+      }
+      
+      .testoo {
+          color: var(--neutral-color-two-900);
+          font-style: var(--main-bg-color-black);
+          transition: .5s ease;
+          opacity: 100%;
+          align-content: flex-start;
+          transform: none;
+          text-align:center;
+          justify-content: flex-start;
+          margin-top: -180px;
+          line-height: 23px;
+          position:absolute;
+
+      }
+      
+      
+      
+      .gamer:hover .textoentestimonio {
+          opacity: 0.3;
+      }
+        
+      
+      .gamer:hover .testoo {
+          opacity: 1;
+          color: var(--main-bg-color-purple);
+      }
+      
+      
+
+      #section-9{
+        padding-top: 0%;
+      padding-bottom: 30%;
+      margin: 0 320px;
+      gap:125px;
+      margin-left: 20%;
+    
+    
+      
+      }
+    
+      .ultimotitulo{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 78px;
+    
+    position: absolute;
+    width: 808px;
+    height: 744px;
+    left: -209px;
+    top: 44px;
+    
+      }
+    
+    .branditas{
+     display: flex;
+     flex-direction: row;
+     margin-left: 30%;
+    align-items:flex-start;
+    padding: 10px;
+    gap: 10px;
+    
+    width: 235px;
+    height: 60px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -0.005em;
+      }
+    
+    .logos{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    gap: 15px;
+    
+    width: 808px;
+    height: 606px;
+    
+    }
+    
+    .fila1{
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding-right: 70%;
+    
+    }
+    
+    .fila2{
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding-right: 70%;
+    
+  
+    }
+    
+
+}
+
+
+
+  
 
 /*
 #section-5{
