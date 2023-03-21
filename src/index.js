@@ -31,6 +31,7 @@ import "/src/Components/footer/logiFooter.js";
       },textOutTimer);
   }
 
+
   window.onload=animateText;
 
    $('.owl-carousel').owlCarousel({
@@ -48,4 +49,13 @@ import "/src/Components/footer/logiFooter.js";
                     items: 3
                 }
             }
+        })
+
+        var swiper = new Swiper(".mySwiper", {
+          autoplay: {
+            delay: 4000,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+          }
         })
