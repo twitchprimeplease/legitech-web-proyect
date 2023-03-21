@@ -26,5 +26,32 @@
 
 #footer-logo img{
     max-width: 200px;
+}
 
+#last-bit{
+    justify-content: space-between;
+}
+
+@media(max-width:768px) {
+    #suscribe-footer{
+        display: none;
+    }
+
+    .logi-footer{
+        padding: 0px 24px;
+    }
+
+    .logi-footer a{
+        color: var(--neutral-color-two-900) !important;
+    }
+
+    #last-bit{
+        display:flex;
+        align-items: center;
+    }
+
+    .logi-footer h5{
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
 }
