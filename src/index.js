@@ -1,7 +1,8 @@
 import "/src/Components/spotlightZoneVibe100/spotlightZoneVibe100.js";
 import "/src/Components/galleryMasterSeries/galleryMasterSeries.js";
 import "/src/Components/environmentSection/environmentSection.js";
-import "/src/Components/footer/logiFooter.js"; 
+import "/src/Components/footer/logiFooter.js";
+
 
 let multipleCardCarousel = document.querySelector(
     "#pop-carousel"
@@ -45,6 +46,7 @@ let multipleCardCarousel = document.querySelector(
   });
 
   
+
   const txts=document.querySelector(".slide-text").children,
         txtsLen=txts.length;
         let index=0;
@@ -62,7 +64,7 @@ let multipleCardCarousel = document.querySelector(
       },textOutTimer)
 
       setTimeout(function() {
-          
+
       if(index == txtsLen-1) {
           index=0;
       }
@@ -70,8 +72,24 @@ let multipleCardCarousel = document.querySelector(
           index++;
       }
       animateText();
-      },textOutTimer);   
+      },textOutTimer);
   }
 
   window.onload=animateText;
 
+   $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 15,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
