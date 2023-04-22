@@ -2,11 +2,12 @@ class dropdown extends HTMLElement{
     constructor(){
         super();
         this.categories = [];
+        this.render();
     }
 
     render() {
         this.innerHTML = `
-        <link rel="stylesheet" href="/src/Components/environmentSection/enviromenSectionStyle.css">
+        <link rel="stylesheet" href="/src/Components/dropdown/dropdown.js">
         <div class="d-flex gap-5 justify-content-center">
         <div class="dropdown-menu d-block position-static pt-0 mx-0 rounded-3 shadow overflow-hidden w-280px">
             <form class="p-2 mb-2 bg-light border-bottom">
