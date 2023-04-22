@@ -1,5 +1,7 @@
 import './Components/cardElement/cardElement.js';
 import './Components/footer/logiFooter.js'
+import './Components/dropdown/dropdown.js';
+
 const productContainer = document.querySelector('#products-container');
 
 async function getData(){
@@ -28,7 +30,11 @@ function organiceData(array){
         productObj.setAttribute('price', product.price);
         productObj.setAttribute('image', product.url[0]);
         productObj.setAttribute('type', product.type);
-        productContainer.append(productObj);
+        // productContainer.append(productObj);
         
     });
 }
+
+function createCategories(array, title){
+
+};

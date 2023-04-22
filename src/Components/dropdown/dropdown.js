@@ -1,4 +1,4 @@
-class dropdown extends HTMLElement{
+class dropdownComponent extends HTMLElement{
     constructor(){
         super();
         this.categories = [];
@@ -35,3 +35,6 @@ class dropdown extends HTMLElement{
         `
     }
 }
+
+customElements.define('dropdown-component', dropdownComponent);
+export default dropdownComponent;
