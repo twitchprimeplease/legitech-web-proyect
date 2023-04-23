@@ -3,37 +3,37 @@ import "/src/Components/galleryMasterSeries/galleryMasterSeries.js";
 import "/src/Components/environmentSection/environmentSection.js";
 import "/src/Components/footer/logiFooter.js";
 
-  const txts=document.querySelector(".slide-text").children,
+const txts=document.querySelector(".slide-text").children,
         txtsLen=txts.length;
         let index=0;
         const textInTimer=3000,
-          textOutTimer=3200;
+        textOutTimer=3200;
 
-  function animateText() {
-      for(let i=0; i<txtsLen; i++){
-          txts[i].classList.remove("text-in", "text-out");
-      }
-      txts[index].classList.add("text-in");
+    function animateText() {
+        for(let i=0; i<txtsLen; i++){
+            txts[i].classList.remove("text-in", "text-out");
+        }
+        txts[index].classList.add("text-in");
 
-      setTimeout(function() {
-          txts[index].classList.add("text-out");
-      },textOutTimer)
+        setTimeout(function() {
+            txts[index].classList.add("text-out");
+        },textOutTimer)
 
-      setTimeout(function() {
+        setTimeout(function() {
 
-      if(index == txtsLen-1) {
-          index=0;
-      }
-      else {
-          index++;
-      }
-      animateText();
-      },textOutTimer);
-  }
+        if(index == txtsLen-1) {
+            index=0;
+        }
+        else {
+            index++;
+        }
+        animateText();
+        },textOutTimer);
+    }
 
-  window.onload=animateText;
+    window.onload=animateText;
 
-   $('.owl-carousel').owlCarousel({
+    $('.owl-carousel').owlCarousel({
             loop: true,
             margin: 15,
             nav: true,

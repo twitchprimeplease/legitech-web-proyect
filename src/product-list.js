@@ -1,30 +1,35 @@
 import './Components/cardElement/cardElement.js';
 import './Components/footer/logiFooter.js'
-import './Components/dropdown/dropdown.js';
+import './Components/filter/filter.js';
 
 const productContainer = document.querySelector('#products-container');
-const searchFilter = document.querySelector('#category-filters');
+const categorieFilters = document.querySelector('#categories-filters');
+const categoryButton = document.querySelectorAll('#categories-filters button');
+const collectionFilters = document.querySelector('#collection-filters');
 
+categoryButton.forEach(btn => btn.addEventListener('click', ()=> setCategory(btn)));
 
 async function getData(){
     try {
     let response = await fetch('https://apimocha.com/json-logitech-s8/all-products');
-    let data = await response.json();+
+    let data = await response.json();
     organiceData(data);
     } catch (e) {
     console.log(e);
         }
 }
 
-console.log(getData());
-// fetch('https://apimocha.com/json-logitech-s8/all-products')
-// .then(response => response.json())
-// .then(data => console.log(data));
+function organiceData(array, category){
 
+    let filteredProducts = [];
+    productContainer.innerHTML='';
+    if((!category || category==='All')){
+        filteredProducts = array;
+    } else {
+        filteredProducts = array.filter(product => product.type === category)
+    }
 
-function organiceData(array){
-    console.log(array);
-    array.forEach(product => {
+    filteredProducts.forEach(product => {
         const productObj = document.createElement('card-element');
         productObj.setAttribute('name', product.name);
         productObj.setAttribute('description', product.description);
@@ -35,29 +40,35 @@ function organiceData(array){
         
     });
 
-    // const categories = new Set();
-    // array.forEach(category => {
-    //     categories.add(category.type);
-    // });
-    // categories.forEach(category => {
-    //     const filterObj = document.createElement('option');
-    //     filterObj.setAttribute('value',category)
-    //     filterObj.append(searchFilter);
-    //     console.log(filterObj);
-    // });
+    const categories = new Set();
+    array.forEach(category => {
+        categories.add(category.type);
+    });
+    categories.forEach(category => {
+        const filterObj = document.createElement('filter-component');
+        filterObj.setAttribute('name',category)
+        categorieFilters.append(filterObj);
+    });
 
-    // console.log(categories);
+    const collections = new Set();
+    array.forEach(elem => {
+        if (elem.collection != "none"){
+            collections.add(elem.collection);
+        }
+    });
+
+    collections.forEach(elem => {
+        const filterObj = document.createElement('filter-component');
+            filterObj.setAttribute('name',elem)
+            collectionFilters.append(filterObj);
+
+    })
 }
 
-// function createCategories(array){
-//     // console.log(array);
-//     const categories = new Set();
-//     const filterObj = document.createElement('dropdown-component');
-//     array.forEach(category => {
-//         categories.add(category.type);
-//     });
-//     filterObj.setAttribute('name',"Intention")
-//     filterObj.append(searchFilter);
-//     console.log(categories);
+function setCategory(elem){
+    const category = elem.textContent;
+    console.log(elem.textContent);
+    getData(category)
+    }
 
-// };
+getData();

@@ -1,4 +1,4 @@
-class dropdownComponent extends HTMLElement{
+class filterComponent extends HTMLElement{
     constructor (){
         super();
         this.name = this.getAttribute('name');
@@ -20,13 +20,8 @@ class dropdownComponent extends HTMLElement{
 
     render(){
         this.innerHTML = `
-            <option value="${this.name}">${this.name}</option>
-            <!-- <article class="product">
-                <div class = "product-info">
-                    <h3 class ="product-name">${this.name}</h3>
-
-                </div>
-            </article> -->
+            <link rel="stylesheet" href="/src/Components/filter/styles.css">
+            <button type="button" class="btn-primary">${this.name}</button>
         `
     }
 
@@ -34,7 +29,7 @@ class dropdownComponent extends HTMLElement{
     // render() {
         
     //     this.innerHTML = `
-    //     <link rel="stylesheet" href="/src/Components/dropdown/styles.css">    
+    //         
     //     <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
     //     <label for="filters"></label>
     //     <select name="filters" id="filters">
@@ -51,5 +46,5 @@ class dropdownComponent extends HTMLElement{
 
 
 
-customElements.define('dropdown-component', dropdownComponent);
-export default dropdownComponent;
+customElements.define('filter-component', filterComponent);
+export default filterComponent;
