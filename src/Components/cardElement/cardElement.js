@@ -26,8 +26,8 @@ class cardElement extends HTMLElement {
         this.innerHTML = `
         <link rel="stylesheet" href="/src/Components/cardElement/style.css">
             <article class="product">
-            <div class="image-container">
-                    <img class= "product-img" src= ${this.image} alt="">
+                <div class="image-container">
+                        <img class= "product-img" src= ${this.image} alt="">
                 </div>
                 <div class="type-container">
                     <h5 class="product-type">${this.type}</h5>
@@ -39,7 +39,7 @@ class cardElement extends HTMLElement {
                     </div>
                     <h4>${this.price}</h4>
                 </div>
-                <button class ="btn-primary" href="#">Buy now!</button> <!-- Aqui debe dirigir hacia un producto -->
+                <button class ="btn-primary" href="/${this.name}"">BUY NOW</button> <!-- Aqui debe dirigir hacia un producto -->
             </article>
         `
     }
