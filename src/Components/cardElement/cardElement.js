@@ -24,18 +24,22 @@ class cardElement extends HTMLElement {
 
     render(){
         this.innerHTML = `
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/src/Components/cardElement/style.css">
             <article class="product">
-                <div class = "product-info">
-                    <h3 class ="product-name">${this.name}</h3>
-                    <p class="product-description">${this.description}</p>
-                    <h5 class="product-type">${this.type}</h5>
-                    <h4>${this.price}</h4>
-                    <button href="#">Buy now!</button> <!-- Aqui debe dirigir hacia un producto -->
-                </div>
-                <div class="image-container">
+            <div class="image-container">
                     <img class= "product-img" src= ${this.image} alt="">
                 </div>
+                <div class="type-container">
+                    <h5 class="product-type">${this.type}</h5>
+                </div>
+                <div class = "product-info">
+                    <h3 class ="product-name">${this.name}</h4>
+                    <div class="product-description">
+                        <p>${this.description}</p>
+                    </div>
+                    <h4>${this.price}</h4>
+                </div>
+                <button class ="btn-primary" href="#">Buy now!</button> <!-- Aqui debe dirigir hacia un producto -->
             </article>
         `
     }
