@@ -1,0 +1,15 @@
+#products-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 58px;
+    margin:36px;
+    
+}
+
+card-element{
+    border-color: var(--neutral-color-grey);
+    border: 1px solid #E5E9EB;
+    border-radius: 7px;
+    overflow: hidden;
+}
