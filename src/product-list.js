@@ -9,24 +9,24 @@ const collectionFilters = document.querySelector('#collection-filters');
 
 categoryButton.forEach(btn => btn.addEventListener('click', ()=> setCategory(btn)));
 
-async function getData(){
+async function getData(filterType){
     try {
     let response = await fetch('https://apimocha.com/json-logitech-s8/all-products');
     let data = await response.json();
-    organiceData(data);
+    organiceData(data, filterType);
     } catch (e) {
     console.log(e);
         }
 }
 
-function organiceData(array, category){
+function organiceData(array, filterType){
 
     let filteredProducts = [];
     productContainer.innerHTML='';
-    if((!category || category==='All')){
+    if((!filterType || filterType==='All')){
         filteredProducts = array;
-    } else {
-        filteredProducts = array.filter(product => product.type === category)
+    } else if(filterType) {
+        filteredProducts = array.filter(product => product.type === filterType)
     }
 
     filteredProducts.forEach(product => {
@@ -47,6 +47,10 @@ function organiceData(array, category){
     categories.forEach(category => {
         const filterObj = document.createElement('filter-component');
         filterObj.setAttribute('name',category)
+        filterObj.addEventListener("click", () =>{ 
+getData(category)
+
+        })
         categorieFilters.append(filterObj);
     });
 
