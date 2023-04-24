@@ -25,10 +25,14 @@ function organiceData(array, filterType){
     productContainer.innerHTML='';
     if((!filterType || filterType==='All')){
         filteredProducts = array;
-    } else if(filterType) {
-        filteredProducts = array.filter(product => product.type === filterType)
+      } else if(Object.keys(filterType)[0]==='category') {
+        
+            filteredProducts = array.filter(product => product.type === Object.values(filterType)[0]);
+        } else if(Object.keys(filterType)[0]==='collection'){
+            
+            filteredProducts = array.filter(product => product.collection === Object.values(filterType)[0]);
     }
-
+    
     filteredProducts.forEach(product => {
         const productObj = document.createElement('card-element');
         productObj.setAttribute('name', product.name);
@@ -48,7 +52,7 @@ function organiceData(array, filterType){
         const filterObj = document.createElement('filter-component');
         filterObj.setAttribute('name',category)
         filterObj.addEventListener("click", () =>{ 
-getData(category)
+getData({"category":category})
 
         })
         categorieFilters.append(filterObj);
@@ -64,6 +68,8 @@ getData(category)
     collections.forEach(elem => {
         const filterObj = document.createElement('filter-component');
             filterObj.setAttribute('name',elem)
+            filterObj.addEventListener("click", () =>{ 
+                getData({"collection":elem})})
             collectionFilters.append(filterObj);
 
     })
