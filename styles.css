@@ -96,6 +96,7 @@ body {
     --neutral-color-one: #57716F;
     --neutral-color-two: #C7B4B4; 
     --neutral-color-two-900:#FFF8F8;
+    --neutral-color-grey: #E5E9EB;
 }
 
 .btn{
@@ -463,6 +464,8 @@ body {
 
 /* Estilos Melanie */
 
+
+
 @media(max-width:768px) {
     html {
         color: #000;
@@ -592,6 +595,8 @@ body {
         text-decoration: none
     }
 }
+
+
 
 /* Estilos Catalina */
 

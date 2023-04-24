@@ -41,9 +41,9 @@
 }
 
 .master-series-section .master-series-gallery img{
-object-fit: cover;
-width: 100%;
-height: 100%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
     transition: all 0.5s ease-in-out ;
 }
