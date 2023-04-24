@@ -31,6 +31,8 @@ const txts=document.querySelector(".slide-text").children,
         },textOutTimer);
     }
 
+
+
     window.onload=animateText;
 
     $('.owl-carousel').owlCarousel({
@@ -48,4 +50,13 @@ const txts=document.querySelector(".slide-text").children,
                     items: 3
                 }
             }
+        })
+
+        var swiper = new Swiper(".mySwiper", {
+          autoplay: {
+            delay: 4000,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+          }
         })
