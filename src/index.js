@@ -4,6 +4,8 @@ import "/src/Components/environmentSection/environmentSection.js";
 import "/src/Components/footer/logiFooter.js";
 import "/src/Components/header/logiHeader.js";
 
+let product="";
+
   const txts=document.querySelector(".slide-text").children,
         txtsLen=txts.length;
         let index=0;
