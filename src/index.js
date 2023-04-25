@@ -2,6 +2,7 @@ import "/src/Components/spotlightZoneVibe100/spotlightZoneVibe100.js";
 import "/src/Components/galleryMasterSeries/galleryMasterSeries.js";
 import "/src/Components/environmentSection/environmentSection.js";
 import "/src/Components/footer/logiFooter.js";
+import "/src/Components/header/logiHeader.js";
 
 const txts=document.querySelector(".slide-text").children,
         txtsLen=txts.length;
