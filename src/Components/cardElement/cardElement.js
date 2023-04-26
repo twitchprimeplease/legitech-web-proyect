@@ -23,6 +23,9 @@ class cardElement extends HTMLElement {
     }
 
     render(){
+        let reference = this.name.replaceAll(" ", "-");
+        let url = "/src/product-detail/index.html?id=" + reference;
+        console.log(url);
         this.innerHTML = `
         <link rel="stylesheet" href="/src/Components/cardElement/style.css">
             <article class="product">
@@ -39,7 +42,7 @@ class cardElement extends HTMLElement {
                     </div>
                     <h4>${this.price}</h4>
                 </div>
-                <button class ="btn-primary" href="/${this.name}"">BUY NOW</button> <!-- Aqui debe dirigir hacia un producto -->
+                <button class ="btn-primary"><a href="${url}">BUY NOW</a></button> 
             </article>
         `
     }

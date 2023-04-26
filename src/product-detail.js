@@ -16,18 +16,12 @@ console.log(solicitude);
 async function getData(){
     try {
     let response = await fetch('https://apimocha.com/json-logitech-s8/all-products');
-    let data = await response.json();+
+    let data = await response.json();
     organiceData(data);
     } catch (e) {
     console.log(e);
         }
 }
-
-console.log(getData());
-// fetch('https://apimocha.com/json-logitech-s8/all-products')
-// .then(response => response.json())
-// .then(data => console.log(data));
-
 
 function organiceData(array){
     console.log(array);
