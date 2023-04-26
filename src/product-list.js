@@ -10,7 +10,7 @@ const productContainer = document.querySelector('#products-container');
 const categoryButton = document.querySelectorAll('#categories-filters button');
 const searchFilter = document.querySelector('#search-filters');
 
-
+console.log('Un león se comió un jabón')
 
 categoryButton.forEach(btn => btn.addEventListener('click', ()=> setCategory(btn)));
 
