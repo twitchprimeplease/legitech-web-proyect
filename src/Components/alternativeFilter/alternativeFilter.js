@@ -67,6 +67,7 @@ class AlternativeFilter extends HTMLElement{
                 </nav>
             `
             
+            
             this.createListElements(this.array);
             this.dropdownMenu();
             
@@ -146,7 +147,6 @@ class AlternativeFilter extends HTMLElement{
                 })
                 colorListFilter.append(filterObj);
         })
-
     }
 
     organiceData(array, filterType){
