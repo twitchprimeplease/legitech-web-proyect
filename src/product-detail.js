@@ -5,7 +5,13 @@ import "/src/Components/footer/logiFooter.js";
 
 const productContainer = document.querySelector('#products-container');
 const searchFilter = document.querySelector('#category-filters');
-let solicitude = "UNIVERSAL FOLIO";
+
+const url = window.location.search;
+const searchParas = new URLSearchParams(url);
+
+let solicitude = searchParas.get("id").replace('"', "");
+
+console.log(solicitude);
 
 async function getData(){
     try {
@@ -27,7 +33,8 @@ function organiceData(array){
     console.log(array);
     console.log(solicitude);
     array.forEach(product => {
-        if (product.name == solicitude) {
+        let comparision =product.name.replaceAll(" ", "-")
+        if (comparision == solicitude) {
         const productObj = document.createElement('detail-element');
         productObj.setAttribute('name', product.name);
         productObj.setAttribute('description', product.description);

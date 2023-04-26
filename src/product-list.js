@@ -24,14 +24,26 @@ console.log(getData());
 
 function organiceData(array){
     console.log(array);
+
+
+
+
     array.forEach(product => {
+        let name = product.name.replaceAll(" ", "-");
+        console.log(name);
+        let url = "../product-detail/index.html?id=" + name;
+
         const productObj = document.createElement('card-element');
         productObj.setAttribute('name', product.name);
         productObj.setAttribute('description', product.description);
         productObj.setAttribute('price', product.price);
         productObj.setAttribute('image', product.url[0]);
         productObj.setAttribute('type', product.type);
+        const enlace = document.createElement('a')
+        enlace.href = url;
+        enlace.innerHTML = product.name;
         productContainer.append(productObj);
+        productContainer.appendChild(enlace);
         
     });
 
