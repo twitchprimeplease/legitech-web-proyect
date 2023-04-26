@@ -29,7 +29,7 @@ class AlternativeFilter extends HTMLElement{
                             </div>
 
                             <ul id="category-list-component" class="list-show">
-                            <button type="button" class="btn-primary">All</button>
+                                <button type="button" class="btn-primary">All</button>
                             </ul>
 
                         </li>
@@ -39,7 +39,7 @@ class AlternativeFilter extends HTMLElement{
                                 <button class ="btn-primary" ">COLLECTION</button>
                             </div>
                             <ul id="collection-list-component"class="list-show">
-                            <button type="button" class="btn-primary">All</button>
+                                <button type="button" class="btn-primary">All</button>
                             </ul>
                         </li>
 
@@ -47,11 +47,20 @@ class AlternativeFilter extends HTMLElement{
                             <div class="list-button">
                                 <button class ="btn-primary" ">PRICE</button>
                             </div>
-                            <ul id="collection-list-component"class="list-show">
-                            <button type="button" class="btn-primary">All</button>
-                            <button type="button" class="btn-primary">0-50</button>
-                            <button type="button" class="btn-primary">50-100</button>
-                            <button type="button" class="btn-primary">100+</button>
+                            <ul class="list-show">
+                                <button type="button" class="btn-primary">All</button>
+                                <button type="button" class="btn-primary">0-50</button>
+                                <button type="button" class="btn-primary">50-100</button>
+                                <button type="button" class="btn-primary">100+</button>
+                            </ul>
+                        </li>
+
+                        <li class="list-item">
+                            <div class="list-button">
+                                <button class ="btn-primary" ">COLOR</button>
+                            </div>
+                            <ul id="color-list-component"class="list-show">
+                                <button type="button" class="btn-primary">All</button>
                             </ul>
                         </li>
 
@@ -85,6 +94,7 @@ class AlternativeFilter extends HTMLElement{
 
         const categoryListFilter= document.querySelector('#category-list-component')
         const collectionListFilter= document.querySelector('#collection-list-component')
+        const colorListFilter = document.querySelector('#color-list-component')
         const categoryButton = document.querySelectorAll('.list-show button');
 
         categoryButton.forEach(btn => btn.addEventListener('click', ()=> this.setCategory(btn)))
@@ -102,26 +112,42 @@ class AlternativeFilter extends HTMLElement{
                 this.organiceData(this.array,{"category":category})
             })
         categoryListFilter.append(filterObj);
-    });
+        });
 
-    const collections = new Set();
-    array.forEach(elem => {
-        if (elem.collection != "none"){
-            collections.add(elem.collection);
-        }
-    });
+        const collections = new Set();
+        array.forEach(elem => {
+            if (elem.collection != "none"){
+                collections.add(elem.collection);
+            }
+        });
 
+        collections.forEach(elem => {
+            const filterObj = document.createElement('filter-component');
+                filterObj.setAttribute('name',elem);
+                filterObj.addEventListener("click", () =>{
 
+                    this.organiceData(this.array,{"collection":elem})
+                })
+                collectionListFilter.append(filterObj);
+        })
 
-    collections.forEach(elem => {
-        const filterObj = document.createElement('filter-component');
-            filterObj.setAttribute('name',elem);
-            filterObj.addEventListener("click", () =>{
-                console.log(elem);
-                this.organiceData(this.array,{"collection":elem})
+        const productColors = new Set();
+        array.forEach(element=>{
+            let colorlist = element.colors;
+            colorlist.forEach(color=>{
+                productColors.add(color)
             })
-            collectionListFilter.append(filterObj);
-    })
+        });
+        
+        productColors.forEach(elem => {
+            const filterObj = document.createElement('filter-component');
+                filterObj.setAttribute('name',elem);
+                filterObj.addEventListener("click", () =>{
+                    this.organiceData(this.array,{"color":elem})
+                })
+                colorListFilter.append(filterObj);
+        })
+
     }
 
     organiceData(array, filterType){
@@ -161,6 +187,15 @@ class AlternativeFilter extends HTMLElement{
                         filteredProducts.push(element)
                     }
                 })
+            } else if(Object.keys(filterType)[0]==='color') {
+                    array.forEach(product => {
+                        let colorArray = product.colors;
+                        if(colorArray.includes(Object.values(filterType)[0])){
+                            filteredProducts.push(product);
+                        }
+                    });
+                    
+                
             }
         
         
