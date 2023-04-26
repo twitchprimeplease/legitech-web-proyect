@@ -4,31 +4,32 @@ import './Components/filter/filter.js';
 import './Components/alternativeFilter/alternativeFilter.js'
 import "./Components/header/logiHeader.js";
 
-const productContainer = document.querySelector('#products-container');
-const categorieFilters = document.querySelector('#categories-filters');
-const categoryButton = document.querySelectorAll('#categories-filters button');
-const collectionFilters = document.querySelector('#collection-filters');
-const searchFilter = document.querySelector('#search-filters');
-const componentButtons = document.querySelectorAll('.final-filter');
+let products = []
 
-const alternativeFilters = document.createElement('alternative-filter');
+const productContainer = document.querySelector('#products-container');
+const categoryButton = document.querySelectorAll('#categories-filters button');
+const searchFilter = document.querySelector('#search-filters');
+
+
 
 categoryButton.forEach(btn => btn.addEventListener('click', ()=> setCategory(btn)));
-componentButtons.forEach(btn => btn.addEventListener('click', ()=> {
-    setCategory(btn);
-    console.log("DHNGDSIKGNSDGKON");}));
 
-async function getData(filterType){
+
+async function getData(){
     try {
     let response = await fetch('https://apimocha.com/json-logitech-s8/all-products');
     let data = await response.json();
-    organiceData(data, filterType);
+    data.forEach(element => {
+        products.push(element)
+    });
+    iniciatePage(products)
+
     } catch (e) {
     console.log(e);
     }
 }
 
-export function organiceData(array, filterType){
+function organiceData(array, filterType){
 
     let filteredProducts = [];
     productContainer.innerHTML='';
@@ -51,46 +52,24 @@ export function organiceData(array, filterType){
         productContainer.append(productObj);
         
     });
-    const categories = new Set();
-    array.forEach(category => {
-        categories.add(category.type);
-    });
-    categories.forEach(category => {
-        const filterObj = document.createElement('filter-component');
-        filterObj.setAttribute('name',category)
-        filterObj.addEventListener("click", () =>{ 
-        getData({"category":category})
-
-        })
-        categorieFilters.append(filterObj);
-    });
-
-    const collections = new Set();
-    array.forEach(elem => {
-        if (elem.collection != "none"){
-            collections.add(elem.collection);
-        }
-    });
-
-    collections.forEach(elem => {
-        const filterObj = document.createElement('filter-component');
-            filterObj.setAttribute('name',elem)
-            filterObj.addEventListener("click", () =>{ 
-                getData({"collection":elem})})
-            collectionFilters.append(filterObj);
-
-    })
-    alternativeFilters.array = array;
-    searchFilter.append(alternativeFilters);
-    console.log(componentButtons)
+    
 
 }
 
-function setCategory(elem){
-    const category = elem.textContent;
-    console.log(elem.textContent);
-    getData(category)
-    }
+function organiceCategories(array){
+
+    const alternativeFilters = document.createElement('alternative-filter');
+    alternativeFilters.array = array;
+    searchFilter.append(alternativeFilters);
+
+}
+
+
+function iniciatePage(array){
+    organiceData(array);
+    organiceCategories(array);
+}
+
 
 getData();
 

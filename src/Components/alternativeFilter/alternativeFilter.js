@@ -6,18 +6,18 @@ class AlternativeFilter extends HTMLElement{
             {"category": "Fades Away", "collection":"Villains"},
             {"category": "Heros", "collection":"Other"},
         ];
-        this.aditionalFuntion= ()=>{console.log("Nada por aqui, nada por alla, levanta la mano y HAZ ESTA M")}
+        
     }
-
 
     connectedCallback(){
         this.render();
     }
 
     render(){
-        
+
         this.innerHTML = `
                 <link rel="stylesheet" href="/src/Components/alternativeFilter/styles.css">
+                <h2>Sort by</h2>
                 <nav class="filter-list">
                         <ul class="list">
 
@@ -29,6 +29,7 @@ class AlternativeFilter extends HTMLElement{
                             </div>
 
                             <ul id="category-list-component" class="list-show">
+                            <button type="button" class="btn-primary">All</button>
                             </ul>
 
                         </li>
@@ -36,12 +37,22 @@ class AlternativeFilter extends HTMLElement{
                         <li class="list-item">
                             <div class="list-button">
                                 <button class ="btn-primary" ">COLLECTION</button>
-
                             </div>
-
                             <ul id="collection-list-component"class="list-show">
+                            <button type="button" class="btn-primary">All</button>
                             </ul>
+                        </li>
 
+                        <li class="list-item">
+                            <div class="list-button">
+                                <button class ="btn-primary" ">PRICE</button>
+                            </div>
+                            <ul id="collection-list-component"class="list-show">
+                            <button type="button" class="btn-primary">All</button>
+                            <button type="button" class="btn-primary">0-50</button>
+                            <button type="button" class="btn-primary">50-100</button>
+                            <button type="button" class="btn-primary">100+</button>
+                            </ul>
                         </li>
 
                     </ul>
@@ -65,7 +76,6 @@ class AlternativeFilter extends HTMLElement{
                 if(menu.clientHeight == "0"){
                     height=menu.scrollHeight;
                 }
-            
                 menu.style.height = `${height}px`;
             })
         });
@@ -75,29 +85,23 @@ class AlternativeFilter extends HTMLElement{
 
         const categoryListFilter= document.querySelector('#category-list-component')
         const collectionListFilter= document.querySelector('#collection-list-component')
+        const categoryButton = document.querySelectorAll('.list-show button');
+
+        categoryButton.forEach(btn => btn.addEventListener('click', ()=> this.setCategory(btn)))
 
         const categories = new Set();
         array.forEach(category => {
         categories.add(category.type);
         });
 
-        console.log(categories);
-        categories.forEach(category => {
-        const filterObj = document.createElement('filter-component');
-        filterObj.setAttribute('name',category)
-        filterObj.addEventListener("click", () =>{
-            console.log(category);
-        })
-        categoryListFilter.append(filterObj);
-        // let content;
-        // let li = document.createElement("li");
-        // li.className +="final-filter"
-        // let p = document.createElement("p");
-        // content = category;
-        // p.appendChild(document.createTextNode(content));
-        // categoryListFilter.appendChild(li).appendChild(p);
-    
 
+        categories.forEach(category => {
+            const filterObj = document.createElement('filter-component');
+            filterObj.setAttribute('name',category)
+            filterObj.addEventListener("click", () =>{
+                this.organiceData(this.array,{"category":category})
+            })
+        categoryListFilter.append(filterObj);
     });
 
     const collections = new Set();
@@ -107,25 +111,77 @@ class AlternativeFilter extends HTMLElement{
         }
     });
 
-    console.log(collections);
+
 
     collections.forEach(elem => {
         const filterObj = document.createElement('filter-component');
             filterObj.setAttribute('name',elem);
             filterObj.addEventListener("click", () =>{
                 console.log(elem);
+                this.organiceData(this.array,{"collection":elem})
             })
             collectionListFilter.append(filterObj);
-                    // let content;
-        // let li = document.createElement("li");
-        // let p = document.createElement("p");
-        // li.className +="final-filter"
-        // content = elem;
-        // p.appendChild(document.createTextNode(content));
-        // collectionListFilter.appendChild(li).appendChild(p);
     })
     }
 
+    organiceData(array, filterType){
+
+        const productContainer = document.querySelector('#products-container');
+
+        let filteredProducts = [];
+        productContainer.innerHTML='';
+
+    
+        if((!filterType || filterType==='All')){
+            filteredProducts = array;
+            } else if(Object.keys(filterType)[0]==='category') {
+                filteredProducts = array.filter(product => product.type === Object.values(filterType)[0]);
+            } else if(Object.keys(filterType)[0]==='collection'){
+                filteredProducts = array.filter(product => product.collection === Object.values(filterType)[0]);
+            } else if(filterType === '0-50'){
+                array.forEach(element=>{
+                    let num =element.price.split('$')[1].split('.')[0];
+                    if(num > 0 && num <50){
+                        filteredProducts.push(element)
+                    }
+                })
+            }
+            else if(filterType === '50-100'){
+                array.forEach(element=>{
+                    let num =element.price.split('$')[1].split('.')[0];
+                    if(num > 50 && num < 100){
+                        filteredProducts.push(element)
+                    }
+                })
+            }
+            else if(filterType === '100+'){
+                array.forEach(element=>{
+                    let num =element.price.split('$')[1].split('.')[0];
+                    if(num > 100){
+                        filteredProducts.push(element)
+                    }
+                })
+            }
+        
+        
+        
+        filteredProducts.forEach(product => {
+            const productObj = document.createElement('card-element');
+            productObj.setAttribute('name', product.name);
+            productObj.setAttribute('description', product.description);
+            productObj.setAttribute('price', product.price);
+            productObj.setAttribute('image', product.url[0]);
+            productObj.setAttribute('type', product.type);
+            productContainer.append(productObj);
+            
+        });
+    }
+
+    setCategory(elem){
+        const category = elem.textContent;
+        console.log(elem.textContent);
+        this.organiceData(this.array,category)
+        }
 }
 
 customElements.define('alternative-filter', AlternativeFilter);
