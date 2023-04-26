@@ -1,13 +1,22 @@
 import './Components/cardElement/cardElement.js';
 import './Components/footer/logiFooter.js'
 import './Components/filter/filter.js';
+import './Components/alternativeFilter/alternativeFilter.js'
+import "./Components/header/logiHeader.js";
 
 const productContainer = document.querySelector('#products-container');
 const categorieFilters = document.querySelector('#categories-filters');
 const categoryButton = document.querySelectorAll('#categories-filters button');
 const collectionFilters = document.querySelector('#collection-filters');
+const searchFilter = document.querySelector('#search-filters');
+const componentButtons = document.querySelectorAll('.final-filter');
+
+const alternativeFilters = document.createElement('alternative-filter');
 
 categoryButton.forEach(btn => btn.addEventListener('click', ()=> setCategory(btn)));
+componentButtons.forEach(btn => btn.addEventListener('click', ()=> {
+    setCategory(btn);
+    console.log("DHNGDSIKGNSDGKON");}));
 
 async function getData(filterType){
     try {
@@ -16,20 +25,19 @@ async function getData(filterType){
     organiceData(data, filterType);
     } catch (e) {
     console.log(e);
-        }
+    }
 }
 
-function organiceData(array, filterType){
+export function organiceData(array, filterType){
 
     let filteredProducts = [];
     productContainer.innerHTML='';
+
     if((!filterType || filterType==='All')){
         filteredProducts = array;
-      } else if(Object.keys(filterType)[0]==='category') {
-        
+        } else if(Object.keys(filterType)[0]==='category') {
             filteredProducts = array.filter(product => product.type === Object.values(filterType)[0]);
         } else if(Object.keys(filterType)[0]==='collection'){
-            
             filteredProducts = array.filter(product => product.collection === Object.values(filterType)[0]);
     }
     
@@ -43,7 +51,6 @@ function organiceData(array, filterType){
         productContainer.append(productObj);
         
     });
-
     const categories = new Set();
     array.forEach(category => {
         categories.add(category.type);
@@ -52,7 +59,7 @@ function organiceData(array, filterType){
         const filterObj = document.createElement('filter-component');
         filterObj.setAttribute('name',category)
         filterObj.addEventListener("click", () =>{ 
-getData({"category":category})
+        getData({"category":category})
 
         })
         categorieFilters.append(filterObj);
@@ -73,6 +80,10 @@ getData({"category":category})
             collectionFilters.append(filterObj);
 
     })
+    alternativeFilters.array = array;
+    searchFilter.append(alternativeFilters);
+    console.log(componentButtons)
+
 }
 
 function setCategory(elem){
@@ -82,3 +93,5 @@ function setCategory(elem){
     }
 
 getData();
+
+
