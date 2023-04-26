@@ -1,4 +1,3 @@
-
 class AlternativeFilter extends HTMLElement{ 
     constructor(){
         super();
@@ -201,14 +200,19 @@ class AlternativeFilter extends HTMLElement{
         
         
         filteredProducts.forEach(product => {
+            let name = product.name.replaceAll(" ", "-");
+            let link = '/src/product-detail/index.html?id=' + name;
             const productObj = document.createElement('card-element');
             productObj.setAttribute('name', product.name);
             productObj.setAttribute('description', product.description);
             productObj.setAttribute('price', product.price);
             productObj.setAttribute('image', product.url[0]);
             productObj.setAttribute('type', product.type);
+            const enlace = document.createElement('a')
+            enlace.href = link;
+            enlace.innerHTML = product.name;
             productContainer.append(productObj);
-            
+            productContainer.appendChild(enlace);
         });
     }
 
