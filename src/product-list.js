@@ -1,38 +1,50 @@
 import './Components/cardElement/cardElement.js';
 import './Components/footer/logiFooter.js'
-import './Components/dropdown/dropdown.js';
+import './Components/filter/filter.js';
+import './Components/alternativeFilter/alternativeFilter.js'
+import "./Components/header/logiHeader.js";
+
+let products = []
 
 const productContainer = document.querySelector('#products-container');
-const searchFilter = document.querySelector('#category-filters');
+const categoryButton = document.querySelectorAll('#categories-filters button');
+const searchFilter = document.querySelector('#search-filters');
+
+categoryButton.forEach(btn => btn.addEventListener('click', ()=> setCategory(btn)));
 
 
 async function getData(){
     try {
     let response = await fetch('https://apimocha.com/json-logitech-s8/all-products');
-    let data = await response.json();+
-    organiceData(data);
+    let data = await response.json();
+    data.forEach(element => {
+        products.push(element)
+    });
+    iniciatePage(products)
+
     } catch (e) {
     console.log(e);
-        }
+    }
 }
 
-console.log(getData());
-// fetch('https://apimocha.com/json-logitech-s8/all-products')
-// .then(response => response.json())
-// .then(data => console.log(data));
+function organiceData(array, filterType){
 
+    let filteredProducts = [];
+    productContainer.innerHTML='';
 
-function organiceData(array){
-    console.log(array);
+    if((!filterType || filterType==='All')){
+        filteredProducts = array;
+        } else if(Object.keys(filterType)[0]==='category') {
+            filteredProducts = array.filter(product => product.type === Object.values(filterType)[0]);
+        } else if(Object.keys(filterType)[0]==='collection'){
+            filteredProducts = array.filter(product => product.collection === Object.values(filterType)[0]);
+    }
+    
+    filteredProducts.forEach(product => {
 
-
-
-
-    array.forEach(product => {
         let name = product.name.replaceAll(" ", "-");
         console.log(name);
-        let url = "../product-detail/index.html?id=" + name;
-
+        let url = "/src/product-detail/index.html?id=" + name;
         const productObj = document.createElement('card-element');
         productObj.setAttribute('name', product.name);
         productObj.setAttribute('description', product.description);
@@ -42,34 +54,30 @@ function organiceData(array){
         const enlace = document.createElement('a')
         enlace.href = url;
         enlace.innerHTML = product.name;
+        console.log(enlace)
         productContainer.append(productObj);
         productContainer.appendChild(enlace);
         
     });
+    
 
-    // const categories = new Set();
-    // array.forEach(category => {
-    //     categories.add(category.type);
-    // });
-    // categories.forEach(category => {
-    //     const filterObj = document.createElement('option');
-    //     filterObj.setAttribute('value',category)
-    //     filterObj.append(searchFilter);
-    //     console.log(filterObj);
-    // });
-
-    // console.log(categories);
 }
 
-// function createCategories(array){
-//     // console.log(array);
-//     const categories = new Set();
-//     const filterObj = document.createElement('dropdown-component');
-//     array.forEach(category => {
-//         categories.add(category.type);
-//     });
-//     filterObj.setAttribute('name',"Intention")
-//     filterObj.append(searchFilter);
-//     console.log(categories);
+function organiceCategories(array){
 
-// };
+    const alternativeFilters = document.createElement('alternative-filter');
+    alternativeFilters.array = array;
+    searchFilter.append(alternativeFilters);
+
+}
+
+
+function iniciatePage(array){
+    organiceData(array);
+    organiceCategories(array);
+}
+
+
+getData();
+
+

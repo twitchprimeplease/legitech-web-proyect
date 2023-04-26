@@ -413,8 +413,6 @@ body {
 
 /* Estilos Melanie */
 
-
-
 @media(max-width:768px) {
     html {
         color: #000;
@@ -545,11 +543,7 @@ body {
     }
 }
 
-
-
 /* Estilos Catalina */
-
-
 
 
 @media (min-width: 769px) {
