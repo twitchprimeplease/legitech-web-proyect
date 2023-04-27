@@ -30,23 +30,6 @@ class detailComponent extends HTMLElement{
         `
     }
 
-
-    // render() {
-        
-    //     this.innerHTML = `
-    //     <link rel="stylesheet" href="/src/Components/detail/styles.css">    
-    //     <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
-    //     <label for="filters"></label>
-    //     <select name="filters" id="filters">
-    //         <option value="free">Free</option>
-    //         <option value="bronze">Bronze</option>
-    //         <option value="silver" selected>Silver</option>
-    //         <option value="gold">Gold</option>
-    //     </select>
-    //     </div>
-    //     `
-    // }
-
 }
 
 
