@@ -5,6 +5,7 @@ class AlternativeFilter extends HTMLElement{
             {"category": "Fades Away", "collection":"Villains"},
             {"category": "Heros", "collection":"Other"},
         ];
+        
     }
 
     connectedCallback(){
@@ -15,12 +16,17 @@ class AlternativeFilter extends HTMLElement{
 
         this.innerHTML = `
                 <link rel="stylesheet" href="/src/Components/alternativeFilter/styles.css">
-                <h2 class="headline">SORT BY</h2>
+                <h2>Sort by</h2>
                 <nav class="filter-list">
                         <ul class="list">
 
                         <li class="list-item">
-                                <button class ="btn-primary list-button" >CATEGORY</button>
+                            <div class="list-button">
+                                
+                                <button class ="btn-primary" >CATEGORY</button>
+                                
+                            </div>
+
                             <ul id="category-list-component" class="list-show">
                                 <button type="button" class="btn-primary">All</button>
                             </ul>
@@ -28,18 +34,18 @@ class AlternativeFilter extends HTMLElement{
                         </li>
 
                         <li class="list-item">
-                            
-                                <button class ="btn-primary list-button" ">COLLECTION</button>
-                            
+                            <div class="list-button">
+                                <button class ="btn-primary" ">COLLECTION</button>
+                            </div>
                             <ul id="collection-list-component"class="list-show">
                                 <button type="button" class="btn-primary">All</button>
                             </ul>
                         </li>
 
                         <li class="list-item">
-                            
-                                <button class ="btn-primary list-button" ">PRICE</button>
-                            
+                            <div class="list-button">
+                                <button class ="btn-primary" ">PRICE</button>
+                            </div>
                             <ul class="list-show">
                                 <button type="button" class="btn-primary">All</button>
                                 <button type="button" class="btn-primary">0-50</button>
@@ -49,9 +55,9 @@ class AlternativeFilter extends HTMLElement{
                         </li>
 
                         <li class="list-item">
-                            
-                                <button class ="btn-primary list-button">COLOR</button>
-                            
+                            <div class="list-button">
+                                <button class ="btn-primary" ">COLOR</button>
+                            </div>
                             <ul id="color-list-component"class="list-show">
                                 <button type="button" class="btn-primary">All</button>
                             </ul>
@@ -194,20 +200,24 @@ class AlternativeFilter extends HTMLElement{
         
         
         filteredProducts.forEach(product => {
+            let name = product.name.replaceAll(" ", "-");
+            let link = '/src/product-detail/index.html?id=' + name;
             const productObj = document.createElement('card-element');
             productObj.setAttribute('name', product.name);
             productObj.setAttribute('description', product.description);
             productObj.setAttribute('price', product.price);
             productObj.setAttribute('image', product.url[0]);
             productObj.setAttribute('type', product.type);
+            const enlace = document.createElement('a')
+            enlace.href = link;
+            enlace.innerHTML = product.name;
             productContainer.append(productObj);
-
+            productContainer.appendChild(enlace);
         });
     }
 
     setCategory(elem){
         const category = elem.textContent;
-        console.log(elem.textContent);
         this.organiceData(this.array,category)
         }
 }

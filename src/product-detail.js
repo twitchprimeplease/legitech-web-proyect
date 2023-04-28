@@ -1,5 +1,4 @@
 import "/src/Components/detailElement/detailElement.js";
-import "/src/Components/detail/detail.js";
 import "/src/Components/header/logiHeader.js";
 import "/src/Components/footer/logiFooter.js";
 
