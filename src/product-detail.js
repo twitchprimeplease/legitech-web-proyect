@@ -1,9 +1,5 @@
 import "/src/Components/detailElement/detailElement.js";
-<<<<<<< HEAD
-import "/src/Components/detail/detail.js";
 import "/src/Components/cardElement/cardElement.js";
-=======
->>>>>>> 5375cb33ffb6b4152703ca0e738f660b37fd5d69
 import "/src/Components/header/logiHeader.js";
 import "/src/Components/footer/logiFooter.js";
 import "/src/Components/comments/comments.js";
