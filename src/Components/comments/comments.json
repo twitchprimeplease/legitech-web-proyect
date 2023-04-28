@@ -1,0 +1,14 @@
+{
+    "comentarios": [
+      {
+        "usuario": "Juan",
+        "texto": "Este es un comentario con una imagen",
+        "imagen": "/src/images/cata ima/perfilt.png"
+      },
+      {
+        "usuario": "María",
+        "texto": "Este es otro comentario con una imagen",
+        "imagen": "/src/images/cata ima/perfilo.png"
+      }
+    ]
+  }
