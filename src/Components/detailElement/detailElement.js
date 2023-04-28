@@ -32,15 +32,15 @@ class detailElement extends HTMLElement {
                     <img class= "product-img" src= ${this.image} alt="">
                     </div>
                     <div class="cont-arti col-md-5 align-items-center">
-                    <h5 class="product-type">${this.type}</h5>
+                    <h5 class="button product-type">${this.type}</h5>
                     <div class = "product-info">
-                    <h3 class ="product-name">${this.name}</h4>
+                    <h3 class ="title-1 product-name">${this.name}</h4>
                     <div class="product-description">
-                        <p>${this.description}</p>
+                        <p class="txt-body">${this.description}</p>
                     </div>
-                    <h4>${this.price}</h4>
+                    <h4 class="headline price">${this.price}</h4>
                 </div>
-                <button type="button" id="buy-btn" class="btn-primary button" href="/${this.name}"">ADD TO CART</button>
+                <button type="button" id="add-cart-btn" class="btn-primary button" href="/${this.name}"">ADD TO CART</button>
                     </div>
                 </div>
              </div>
