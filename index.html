@@ -7,174 +7,146 @@
     <title>Logitech</title>
     <link  rel="icon"   href="./src/images/logi-logo.jpg" type="image/jpg" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Nathalia -->
-    <header class="container-fluid">      
-        <nav class="nav-bar">
-            <div class="logo">
-                <a href=""> <img src="./src/images/natha-img/logitech-logo.png"> </a>
-            </div>
-            <ul id="nav-items" class="button">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">PRODUCTS</a></li>
-                <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">CONTACT</a></li>
-            </ul>
-            <div class="nav-icon">
-                <ul>
-                    <img src="./src/images/natha-img/search-icon.png">
-                    <a href="">
-                        <button type="button" class="btn btn-outline-primary button" style="margin-left: 3em;">SIGN IN</button>
-                    </a>
-                </ul>
-            </div>
-            
-        </nav>
-    </header>
+
+    <logi-header></logi-header>
 
     <main>
 
         <!-- Nathalia -->
-        <section id="section-1">
-                <div class="wrap-1">
-                    <div class="wrap-text">
-                        <h1 class="title-1">highlight your</h1>
-                            <p class="slide-text title-1">   
-                                <span>personality</span> 
-                                <span>style</span>
-                                <span>experience</span>
-                                <span>space</span>
-                            </p>     
-                        <h4 class="txt-body">take your setup to another level</h4>
+        <section class="section-1">
+            <div id="principal-carousel" class="carousel-first" data-bs-ride="carousel">
+                <div class="carousel-inner detail">
+                    <div class="carousel-item active carou-item">
+                    <img src="src/images/natha-img/port.jpg" class="d-block w-100 carou-img">
+                    <div class="carousel-caption top-0 mt-4">
+                        <h2 class="title-2">MAKE IT YOURS</h2>
+                        <h1 class="title-1">HIGHLIGHT  YOUR</h1>
+                        <div class="wrap-text top-0 mt-4">
+
+                        <p class="slide-text title-1 top-0">
+                            <span>personality</span>
+                            <span>style</span>
+                            <span>experience</span>
+                            <span>space</span>
+                        </p>
+
+                        </div>
+                      <button id="btn-prin" class="btn-primary button" style="margin-top: 3rem;">VIEW MORE</button>
                     </div>
-                    <div class=btn-up>
-                        <button type="button" class="btn btn-outline-secondary btn-lg button">VIEW MORE</button>
                     </div>
                 </div>
+            </div>
         </section>
+
         <section id="section-2">
-            <h1 class="title-1">MEET OUR NEW CATALOG</h1>
-            <h2 class="title-2">POP MOUSE/KEYS</h2>
-            <div id="pop-images">
-                <img src="src/images/natha-img/pop-emoji-daydream.jpg" alt="">
-                <img src="src/images/natha-img/pop-emoji-blast.jpg" alt="">
-                <img src="src/images/natha-img/pop-emoji-heartbreaker.jpg" alt="">
-            </div>
-            <div id="pop-carousel" class="carousel" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="pop-card">
-                            <div class="img-wrapper"><img src="src/images/natha-img/pop-mouse-1.jpg" class="d-block w-100 pop-img" alt=""> 
-                                <div class="middle headline">
-                                    <p>Daydream</p>
-                                    <div class="pop-card-button">
-                                        <button type="button" class="btn btn-primary btn-lg button">DETAILS</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="pop-card">
-                            <div class="img-wrapper"><img src="src/images/natha-img/pop-mouse-2.jpg" class="d-block w-100 pop-img" alt=""> </div>
-                            <div class="middle headline">
-                                <p>Blast</p>
-                                <div class="pop-card-button">
-                                    <button type="button" class="btn btn-primary btn-lg button">DETAILS</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="pop-card">
-                            <div class="img-wrapper"><img src="src/images/natha-img/pop-mouse-3.jpg" class="d-block w-100 pop-img" alt=""> </div>
-                            <div class="middle headline">
-                                <p>Heartbreaker</p>
-                                <div class="pop-card-button">
-                                    <button type="button" class="btn btn-primary btn-lg button">DETAILS</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="pop-card">
-                            <div class="img-wrapper"><img src="src/images/natha-img/pop-keys-1.jpg" class="d-block w-100 pop-img" alt=""> </div>
-                            <div class="middle headline">
-                                <p>Cosmos</p>
-                                <div class="pop-card-button">
-                                    <button type="button" class="btn btn-primary btn-lg button">DETAILS</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="pop-card">
-                            <div class="img-wrapper"><img src="src/images/natha-img/pop-keys-2.jpg" class="d-block w-100 pop-img" alt=""> </div>
-                            <div class="middle headline">
-                                <p>Daydream</p>
-                                <div class="pop-card-button">
-                                    <button type="button" class="btn btn-primary btn-lg button">DETAILS</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="pop-card">
-                            <div class="img-wrapper"><img src="src/images/natha-img/pop-keys-3.jpg" class="d-block w-100 pop-img" alt=""> </div>
-                            <div class="middle headline">
-                                <p>Heartbreaker</p>
-                                <div class="pop-card-button">
-                                    <button type="button" class="btn btn-primary btn-lg button">DETAILS</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
+            <h1 class="title-1" style="margin-bottom: 2%;">FROM THE <span style="color: #5759AE"> AURORA</span> COLLECTION</h1>
+            <p class="txt-body text-center" style="margin-left: 15%; margin-right: 15%; margin-bottom: 3%;"> Meet the gear that plays best together and is designed intentionally for comfort, style,
+              and gaming performance. Go for the complete, seamless setup that shares the same dreamy aesthetic—synced RGB style included.</p>
+              <center>
+              <button id="aurora-btn" class="btn-outline-secondary button" style="margin-top: 0.2rem;">SHOP THE AURORA COLLECTION</button>
+              </center>
+              <div id="slider" style="margin-top: 6rem;">
+              <div class="row">
+                  <div class="col-12 m-auto">
+                      <div class="owl-carousel owl-theme">
+                          <div class="item mb-4">
+                              <div class="card border-0 shadow">
+                                  <img src="src/images/natha-img/mouse-1.jpg" alt="" class="card-img-top">
+                                  <div class="card-body">
+                                      <div class="card-title text-center">
+                                          <h4 class="headline">G705</h4>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="item">
+                              <div class="card border-0 shadow">
+                                  <img src="src/images/natha-img/mouse-2.jpg" alt="" class="card-img-top">
+                                  <div class="card-body">
+                                      <div class="card-title text-center">
+                                          <h4 class="headline">G706</h4>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="item">
+                              <div class="card border-0 shadow">
+                                  <img src="src/images/natha-img/auri.jpg" alt="" class="card-img-top">
+                                  <div class="card-body">
+                                      <div class="card-title text-center">
+                                        <h4 class="headline">G735</h4>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="item">
+                              <div class="card border-0 shadow">
+                                  <img src="src/images/natha-img/Key-1.jpg" alt="" class="card-img-top">
+                                  <div class="card-body">
+                                      <div class="card-title text-center">
+                                        <h4 class="headline">G715</h4>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="item">
+                              <div class="card border-0 shadow">
+                                  <img src="src/images/natha-img/key-2.jpg" alt="" class="card-img-top">
+                                  <div class="card-body">
+                                      <div class="card-title text-center">
+                                        <h4 class="headline">G714</h4>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="item">
+                              <div class="card border-0 shadow">
+                                  <img src="src/images/natha-img/key-3.jpg" alt="" class="card-img-top">
+                                  <div class="card-body">
+                                      <div class="card-title text-center">
+                                        <h4 class="headline">G713</h4>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
         </section>
-        <article id="article-1">
-            <div id="containt-1">
-                <figure class="img-config">
-                    <img src="src/images/natha-img/setup.jpg" alt="">
-                </figure>
-                <aside class="text-edit">
-                    <div>
-                    <h1 class="title-2">POP HIGHLIGHTS YOUR PERSONALITY</h1>
-                    <p class="txt-body">Own your space with the right accessories to take your productivity and style to new levels. 
-                        Discover POP Mouse, StreamCam, G733 and Logitech Desk Mat.</p> 
-                    </div>
-                    <button type="button" class="btn btn-primary btn-lg button">VIEW MORE</button>
-                </aside>
+
+
+        <article class="article-0">
+          <div class="col-12 row">
+            <div class="img-arti col-md-7">
+              <img src="src/images/natha-img/img-article.jpg" alt="">
             </div>
-            
-            <div id="containt-2">
-                <aside class="containt-edit">
-                    <div>
-                    <h1 class="title-2">PERSONALITY THAT POPS</h1>
-                    <p class="txt-body">Unleash personality onto your deskspace and beyond with POP Keys. 
-                        Together with a matching POP Mouse, let your true self shine with a statement 
-                        desktop aesthetic and fun customizable emoji keys.</p> 
-                    </div>
-                    <button type="button" class="btn btn-primary btn-lg button">VIEW MORE</button>
-                </aside>
-                <figure class="img-config">
-                    <img src="src/images/natha-img/img-article.jpg" alt="">
-                </figure>
+            <div id="body-arti" class="cont-arti col-md-5 align-items-center">
+              <h1 class="title-1">DIAL IN YOUR GEAR WITH G HUB</h1>
+                    <p class="txt-body">You have total control of your playstyle and your aesthetic. Show off a little and customize your RGB with G HUB to make it all your own. 
+                      Toggle into Game Mode and turn off certain keys while you game so you don’t interrupt any epic adventures. Customize which keys deactivate in G HUB. 
+                      Customize and program as much as you want or just start playing right away with out-of-the-box lighting and settings. G715 is ready to go.</p>
+              <button id="arti-btn" class="btn-outline-primary button">VIEW MORE</button>
             </div>
+          </div>
         </article>
-    
+
+
+
         <!-- Catalina -->
         <section id="section-4" class ="carrouselito">
            <span class="products title-1" >
@@ -345,19 +317,22 @@
             </div>
 
         </section>
-    
+
     </main>
 
     <!-- Melanie -->
+
     <logi-footer></logi-footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"> </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"></script>
     <script type="module" src="/src/index.js"></script>
 
-   
+
 
 </body>
 </html>
