@@ -218,7 +218,6 @@ class AlternativeFilter extends HTMLElement{
 
     setCategory(elem){
         const category = elem.textContent;
-        console.log(elem.textContent);
         this.organiceData(this.array,category)
         }
 }
