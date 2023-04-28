@@ -60,11 +60,8 @@ class AlternativeFilter extends HTMLElement{
                     </ul>
                 </nav>
             `
-            
-            
             this.createListElements(this.array);
             this.dropdownMenu();
-            
 
         }
 
@@ -144,13 +141,10 @@ class AlternativeFilter extends HTMLElement{
     }
 
     organiceData(array, filterType){
-
         const productContainer = document.querySelector('#products-container');
-
         let filteredProducts = [];
         productContainer.innerHTML='';
 
-    
         if((!filterType || filterType==='All')){
             filteredProducts = array;
             } else if(Object.keys(filterType)[0]==='category') {
