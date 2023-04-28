@@ -1,5 +1,4 @@
 import "/src/Components/detailElement/detailElement.js";
-import "/src/Components/dropdown/dropdown.js";
 import "/src/Components/header/logiHeader.js";
 import "/src/Components/footer/logiFooter.js";
 
@@ -11,7 +10,6 @@ const searchParas = new URLSearchParams(url);
 
 let solicitude = searchParas.get("id").replace('"', "");
 
-console.log(solicitude);
 
 async function getData(){
     try {
@@ -24,8 +22,6 @@ async function getData(){
 }
 
 function organiceData(array){
-    console.log(array);
-    console.log(solicitude);
     array.forEach(product => {
         let comparision =product.name.replaceAll(" ", "-")
         if (comparision == solicitude) {
@@ -40,3 +36,5 @@ function organiceData(array){
     });
 
 }
+
+getData()
