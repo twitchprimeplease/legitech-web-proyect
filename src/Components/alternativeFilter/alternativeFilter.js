@@ -208,5 +208,3 @@ class AlternativeFilter extends HTMLElement{
 
 customElements.define('alternative-filter', AlternativeFilter);
 export default AlternativeFilter;
-
-// versión buena, en teoría
