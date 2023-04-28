@@ -16,6 +16,8 @@ class CommentsComponent extends HTMLElement {
     render() {
         this.innerHTML = `
       
+        <link rel="stylesheet" href="./product-detail/styles.css">
+
         <div id="comments-container">
          
         </div>
@@ -25,44 +27,83 @@ class CommentsComponent extends HTMLElement {
 
 
         <form id="comment-form">
-        <img src="/src/images/cata ima/perfilf.png">
-  <label for="name-input">Nombre:</label>
+
+        <div class"escribe-tu-comentario">
+        <div class="comment-tittle headline">
+        <p>Escribe tu comentario</p>
+        <div class="profileone">
+        <img src="/src/images/cata ima/perfilf.png" width="3%">
+                </div> 
+                </div>
+
+                <div class ="formularios">
+                <div class ="comment-box">
+                <div class="comment-name button">
+                <p>Nombre:</p>
+                <div class="input">
+  <label for="name-input"></label> </input>
   <input type="text" id="name-input">
   <br>
-  <label for="comment-input">Comentario:</label>
+  </div>
+  <div class ="comment-box-two">
+  <div class="comment-opinion button">
+  <p>Comentario:</p>
   <textarea id="comment-input"></textarea>
   <br>
+
+                </div></div>
+        
+
+  <div class="envio">
   <button type="submit">Enviar</button>
+  </envio>
 </form>
 
+
+
 <div id="comments-container"></div>
 
+    <div class="comment-tittle">
+        <h4>Comentarios</h4>
 
-
-<div id="comments-container"></div>
-
-<div id="comments-container"></div>
       <div id="comments-list">
         <div class="comment-container">
-          <div class="comment" data-author="Juan">
-            <h4>Juan</h4>
-            <img src= "/src/images/cata ima/perfilo.png">
-            <div class="text">Excelente producto, lo recomiendo!</div>
+        <div class="profileone">
+            <img src= "/src/images/cata ima/perfilo.png"width="3%>
+            </div>
+            <div class ="container-info-comm">
+          <div class="comment button" data-author="Juan">
+            <p>Juan</p>
+            <div class="text txt-body"> Excelente producto, lo recomiendo!</div>
           </div>
-          <div class="comment" data-author="María">
-            <h4>María</h4>
-            <img src="/src/images/cata ima/perfilt.png">
-            <div class="text">Me encantó, muy buena calidad.</div>
           </div>
-          <div class="comment" data-author="Pedro">
-            <h4>Pedro</h4>
-            <img src="/src/images/cata ima/perfiltr.png">
-            <div class="text">El envío fue rápido y todo llegó en perfectas condiciones.</div>
-          </div>
-        </div>
-      </div>
-      
 
+          <div id="comments-list">
+          <div class="comment-container">
+          <div class="profileone">
+              <img src= "/src/images/cata ima/perfilt.png" width="3%>
+              </div>
+              <div class ="container-info-comm">
+            <div class="comment button" data-author="María">
+              <p>María</p>
+              <div class="text txt-body"> Me encantó, muy buena calidad.</div>
+            </div>
+            </div>
+  
+            <div id="comments-list">
+            <div class="comment-container">
+            <div class="profileone">
+                <img src= "/src/images/cata ima/perfiltr.png" width="3%>
+                </div>
+                <div class ="container-info-comm">
+              <div class="comment button" data-author="Pedro">
+                <p>Pedro</p>
+                <div class="text txt-body">El envío fue rápido y todo llegó en perfectas condiciones.</div>
+              </div>
+              </div>
+
+         
+          
 
 
 
@@ -202,7 +243,7 @@ function showComments(comments) {
 */
     }
 }
-//aaaaaaaaaaaaaaaaaaaaaaaaaa
+
 
 
 customElements.define('comments-component', CommentsComponent);
