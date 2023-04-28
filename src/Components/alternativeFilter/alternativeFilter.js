@@ -60,8 +60,6 @@ class AlternativeFilter extends HTMLElement{
                     </ul>
                 </nav>
             `
-            
-            
             this.createListElements(this.array);
             this.dropdownMenu();
             
