@@ -16,7 +16,11 @@ class CommentsComponent extends HTMLElement {
     render() {
         this.innerHTML = `
       
+<<<<<<< HEAD
         <link rel="stylesheet" href="./styles.css">
+=======
+        <link rel="stylesheet" href="../Components/comments/style.css">
+>>>>>>> 30e14163283615adb497b1e5462cf46bc3de04ab
 
         <div id="comments-container">
          

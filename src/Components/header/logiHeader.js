@@ -20,7 +20,7 @@ class logiHeader extends HTMLElement {
                             <a class="nav-link button" href="#">DISCOVER</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link button" href="#">PRODUCTS</a>
+                            <a class="nav-link button" href="/src/product-list/index.html">PRODUCTS</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link button" href="#">ABOUT</a>

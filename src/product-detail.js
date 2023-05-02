@@ -1,5 +1,4 @@
 import "/src/Components/detailElement/detailElement.js";
-import "/src/Components/detail/detail.js";
 import "/src/Components/cardElement/cardElement.js";
 import "/src/Components/header/logiHeader.js";
 import "/src/Components/footer/logiFooter.js";
@@ -33,7 +32,10 @@ function organiceData(array){
         productObj.setAttribute('name', product.name);
         productObj.setAttribute('description', product.description);
         productObj.setAttribute('price', product.price);
-        productObj.setAttribute('image', product.url[0]);
+        productObj.setAttribute('image0', product.url[0]);
+        productObj.setAttribute('image1', product.url[1]);
+        productObj.setAttribute('color0', product.colors[0]);
+        productObj.setAttribute('color1', product.colors[1]);
         productObj.setAttribute('type', product.type);
         productContainer.append(productObj);
     }
