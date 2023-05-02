@@ -16,7 +16,7 @@ class CommentsComponent extends HTMLElement {
     render() {
         this.innerHTML = `
       
-        <link rel="stylesheet" href="./product-detail/styles.css">
+        <link rel="stylesheet" href="./styles.css">
 
         <div id="comments-container">
          
@@ -24,16 +24,16 @@ class CommentsComponent extends HTMLElement {
       
         <div id="comments-list"></div>
 
-
+<div class ="container-principal">
 
         <form id="comment-form">
 
         <div class"escribe-tu-comentario">
+        <div class="profileone">
+        <img src="/src/images/cata ima/perfilf.png" width="20%">
+                </div> 
         <div class="comment-tittle headline">
         <p>Escribe tu comentario</p>
-        <div class="profileone">
-        <img src="/src/images/cata ima/perfilf.png" width="3%">
-                </div> 
                 </div>
 
                 <div class ="formularios">
@@ -69,7 +69,7 @@ class CommentsComponent extends HTMLElement {
       <div id="comments-list">
         <div class="comment-container">
         <div class="profileone">
-            <img src= "/src/images/cata ima/perfilo.png"width="3%>
+            <img src= "/src/images/cata ima/perfilo.png"width="20%>
             </div>
             <div class ="container-info-comm">
           <div class="comment button" data-author="Juan">
@@ -81,7 +81,7 @@ class CommentsComponent extends HTMLElement {
           <div id="comments-list">
           <div class="comment-container">
           <div class="profileone">
-              <img src= "/src/images/cata ima/perfilt.png" width="3%>
+              <img src= "/src/images/cata ima/perfilt.png" width="20%>
               </div>
               <div class ="container-info-comm">
             <div class="comment button" data-author="María">
@@ -93,7 +93,7 @@ class CommentsComponent extends HTMLElement {
             <div id="comments-list">
             <div class="comment-container">
             <div class="profileone">
-                <img src= "/src/images/cata ima/perfiltr.png" width="3%>
+                <img src= "/src/images/cata ima/perfiltr.png" width="20%>
                 </div>
                 <div class ="container-info-comm">
               <div class="comment button" data-author="Pedro">
@@ -158,7 +158,7 @@ class CommentsComponent extends HTMLElement {
         }
       
         
-
+</div>
 
 
         
