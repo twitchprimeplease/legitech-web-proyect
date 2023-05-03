@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 #products-container{
     display: flex;
     flex-direction: row;
@@ -24,6 +24,7 @@ gap: 155px;
 }
 #comments-container {
     margin-top: 20px;
+    gap:0px;
   }
   
   #comment-form {
@@ -31,7 +32,7 @@ gap: 155px;
     flex-direction: column;
     align-items: flex-end;
     padding: 0px;
-    gap: 16px;
+    gap: 0px;
     
     width: 429px;
     height: 396px;
@@ -47,7 +48,7 @@ gap: 155px;
   #comment-form button {
     margin-top: 10px;
     padding: 5px 10px;
-    background-color: #4CAF50;
+    background-color:#5759AE;
     color: white;
     border: none;
     border-radius: 3px;
@@ -56,7 +57,7 @@ gap: 155px;
   }
   
   #comment-form button:hover {
-    background-color: #3e8e41;
+    background-color: #303162;
   }
 
   .escribe-tu-comentario{
@@ -79,19 +80,34 @@ gap: 10px;
   }
 
 .comment-tittle{
+
+color:#5759AE;
   display: flex;
-flex-direction: row;
-align-items: center;
-padding: 10px;
+flex-direction: column;
+align-items: flex-start;
+padding-top: 20px;
 gap: 42px;
 
-width: 429px;
-height: 109px;
+width: 449px;
+margin-bottom: 13px;
+height: fit-content;
 }
+
+.comment-opinion{
+  padding-top: 18px;
+}
+
+.input{
+margin-left: -1.2%;
+}
+
+.envio{
+  color: #5759AE;
+}
+
 
   .comment-container {
     margin-top: 20px;
-    border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
     
@@ -106,6 +122,12 @@ height: 109px;
   .comment .text {
     margin-top: 5px;
     
+  }
+
+  comments-component{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
 
@@ -158,9 +180,9 @@ height: 109px;
   }
   
   #comment-form button {
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 5px 10px;
-    background-color: #4CAF50;
+    background-color: #5759AE;
     color: white;
     border: none;
     border-radius: 3px;
@@ -168,7 +190,16 @@ height: 109px;
   }
   
   #comment-form button:hover {
-    background-color: #3e8e41;
+    background-color: #303162;
   }
-=======
->>>>>>> 5375cb33ffb6b4152703ca0e738f660b37fd5d69
+
+  #name-input{
+border-radius: 3px;
+border-color: #30316222;
+
+  }
+
+  #comment-input{
+    border-radius: 3px;
+border-color: #30316222;
+  }

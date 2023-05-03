@@ -16,17 +16,7 @@ class CommentsComponent extends HTMLElement {
     render() {
         this.innerHTML = `
       
-<<<<<<< HEAD
         <link rel="stylesheet" href="./styles.css">
-=======
-        <link rel="stylesheet" href="../Components/comments/style.css">
->>>>>>> 30e14163283615adb497b1e5462cf46bc3de04ab
-
-        <div id="comments-container">
-         
-        </div>
-      
-        <div id="comments-list"></div>
 
 <div class ="container-principal">
 
@@ -36,18 +26,20 @@ class CommentsComponent extends HTMLElement {
         <div class="profileone">
         <img src="/src/images/cata ima/perfilf.png" width="20%">
                 </div> 
-        <div class="comment-tittle headline">
+        <div class="comment-tittle headline ">
         <p>Escribe tu comentario</p>
                 </div>
 
                 <div class ="formularios">
                 <div class ="comment-box">
                 <div class="comment-name button">
+                <div class="comment-nameop button">
                 <p>Nombre:</p>
                 <div class="input">
   <label for="name-input"></label> </input>
   <input type="text" id="name-input">
   <br>
+  </div>
   </div>
   <div class ="comment-box-two">
   <div class="comment-opinion button">
@@ -58,16 +50,71 @@ class CommentsComponent extends HTMLElement {
                 </div></div>
         
 
-  <div class="envio">
+  <div class="envio ">
   <button type="submit">Enviar</button>
-  </envio>
+  </div>
 </form>
 
 
+      
+                </div>
 
-<div id="comments-container"></div>
+                <script type="module">
+              import css from './comments-component.css';
+              
+              const template = document.querySelector('#comments-template').content;
+            
+              class CommentsComponent extends HTMLElement {
+                constructor() {
+                  super();
+            
+                  const shadowRoot = this.attachShadow({ mode: 'open' });
+                  shadowRoot.appendChild(template.cloneNode(true));
+            
+                  const commentForm = shadowRoot.querySelector('#comment-form');
+                  const commentInput = shadowRoot.querySelector('#comment-input');
+                  const nameInput =  shadowRoot.querySelector('#name-input');
+                  const commentsContainer = shadowRoot.querySelector('#comments-container');
+            
+                  commentForm.addEventListener('submit', (event) => {
+                    event.preventDefault();
+                    const commentText = commentInput.value;
+                    if (commentText.trim() === '') {
+                      alert('Debes escribir un comentario');
+                      return;
+                    }
+                    const commentElement = document.createElement('div');
+                    commentElement.classList.add('comment');
+      
+                    const headerElement = document.createElement('h4');
+                    headerElement.textContent = nameText;
+                    commentElement.appendChild(headerElement);
+                    
+                    const imgElement = document.createElement('img');
+                    imgElement.src = '/src/images/cata ima/perfilf.png';
+                    commentElement.appendChild(imgElement);
+      
+                    commentElement.textContent = commentText;
+                    commentsContainer.appendChild(commentElement);
+                    commentInput.value = '';
+                  });
+            
+                  commentsContainer.addEventListener('click', (event) => {
+                    if (event.target.classList.contains('delete-comment')) {
+                      event.target.parentElement.remove();
+                    }
+                  });
+      
+                  commentsContainer.appendChild(commentElement);
+                }
+              }
+            
+              
+      </script>
+        `;
 
-    <div class="comment-tittle">
+        this.innerHTML+= `<div class="comment-tittle title-1">
+        
         <h4>Comentarios</h4>
 
       <div id="comments-list">
@@ -93,6 +140,8 @@ class CommentsComponent extends HTMLElement {
               <div class="text txt-body"> Me encantó, muy buena calidad.</div>
             </div>
             </div>
+            </div>
+            </div>
   
             <div id="comments-list">
             <div class="comment-container">
@@ -105,69 +154,9 @@ class CommentsComponent extends HTMLElement {
                 <div class="text txt-body">El envío fue rápido y todo llegó en perfectas condiciones.</div>
               </div>
               </div>
-
-         
-          
-
-
-
-      <script type="module">
-        import css from './comments-component.css';
-        
-        const template = document.querySelector('#comments-template').content;
-      
-        class CommentsComponent extends HTMLElement {
-          constructor() {
-            super();
-      
-            const shadowRoot = this.attachShadow({ mode: 'open' });
-            shadowRoot.appendChild(template.cloneNode(true));
-      
-            const commentForm = shadowRoot.querySelector('#comment-form');
-            const commentInput = shadowRoot.querySelector('#comment-input');
-            const nameInput =  shadowRoot.querySelector('#name-input');
-            const commentsContainer = shadowRoot.querySelector('#comments-container');
-      
-            commentForm.addEventListener('submit', (event) => {
-              event.preventDefault();
-              const commentText = commentInput.value;
-              if (commentText.trim() === '') {
-                alert('Debes escribir un comentario');
-                return;
-              }
-              const commentElement = document.createElement('div');
-              commentElement.classList.add('comment');
-
-              const headerElement = document.createElement('h4');
-              headerElement.textContent = nameText;
-              commentElement.appendChild(headerElement);
-              
-              const imgElement = document.createElement('img');
-              imgElement.src = '/src/images/cata ima/perfilf.png';
-              commentElement.appendChild(imgElement);
-
-              commentElement.textContent = commentText;
-              commentsContainer.appendChild(commentElement);
-              commentInput.value = '';
-            });
-      
-            commentsContainer.addEventListener('click', (event) => {
-              if (event.target.classList.contains('delete-comment')) {
-                event.target.parentElement.remove();
-              }
-            });
-
-            commentsContainer.appendChild(commentElement);
-          }
-        }
-      
-        
-</div>
-
-
-        
-        
-        `;
+              </div>
+              </div>
+              </div>`
 
         const commentsContainer = document.querySelector('#comments-container');
         const commentForm = document.querySelector('#comment-form');
