@@ -120,24 +120,24 @@ class CommentsComponent extends HTMLElement {
       <div id="comments-list">
         <div class="comment-container">
         <div class="profileone">
-            <img src= "/src/images/cata ima/perfilo.png"width="20%>
+            <img src= "/src/images/cata ima/perfilo.png"width="15%>
             </div>
             <div class ="container-info-comm">
-          <div class="comment button" data-author="Juan">
+          <div class="comment headline" data-author="Juan">
             <p>Juan</p>
-            <div class="text txt-body"> Excelente producto, lo recomiendo!</div>
+            <div class="textco txt-body"> Excelente producto, lo recomiendo!</div>
           </div>
           </div>
 
           <div id="comments-list">
           <div class="comment-container">
           <div class="profileone">
-              <img src= "/src/images/cata ima/perfilt.png" width="20%>
+              <img src= "/src/images/cata ima/perfilt.png" width="15%>
               </div>
               <div class ="container-info-comm">
-            <div class="comment button" data-author="María">
+            <div class="comment headline" data-author="María">
               <p>María</p>
-              <div class="text txt-body"> Me encantó, muy buena calidad.</div>
+              <div class="textco txt-body"> Me encantó, muy buena calidad.</div>
             </div>
             </div>
             </div>
@@ -146,12 +146,12 @@ class CommentsComponent extends HTMLElement {
             <div id="comments-list">
             <div class="comment-container">
             <div class="profileone">
-                <img src= "/src/images/cata ima/perfiltr.png" width="20%>
+                <img src= "/src/images/cata ima/perfiltr.png" width="15%>
                 </div>
                 <div class ="container-info-comm">
-              <div class="comment button" data-author="Pedro">
+              <div class="comment headline" data-author="Pedro">
                 <p>Pedro</p>
-                <div class="text txt-body">El envío fue rápido y todo llegó en perfectas condiciones.</div>
+                <div class="textco txt-body">El envío fue rápido y todo llegó en perfectas condiciones.</div>
               </div>
               </div>
               </div>
