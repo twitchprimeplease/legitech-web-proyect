@@ -45,6 +45,7 @@ class AlternativeFilter extends HTMLElement{
                                 <button type="button" class="btn-primary">0-50</button>
                                 <button type="button" class="btn-primary">50-100</button>
                                 <button type="button" class="btn-primary">100+</button>
+                                
                             </ul>
                         </li>
 
@@ -59,6 +60,7 @@ class AlternativeFilter extends HTMLElement{
 
                     </ul>
                 </nav>
+
             `
             this.createListElements(this.array);
             this.dropdownMenu();
@@ -94,7 +96,6 @@ class AlternativeFilter extends HTMLElement{
         array.forEach(category => {
         categories.add(category.type);
         });
-
 
         categories.forEach(category => {
             const filterObj = document.createElement('filter-component');
@@ -153,7 +154,7 @@ class AlternativeFilter extends HTMLElement{
                 filteredProducts = array.filter(product => product.collection === Object.values(filterType)[0]);
             } else if(filterType === '0-50'){
                 array.forEach(element=>{
-                    let num =element.price.split('$')[1].split('.')[0];
+                    let num =element.price.split('.')[0];
                     if(num > 0 && num <50){
                         filteredProducts.push(element)
                     }
@@ -161,7 +162,7 @@ class AlternativeFilter extends HTMLElement{
             }
             else if(filterType === '50-100'){
                 array.forEach(element=>{
-                    let num =element.price.split('$')[1].split('.')[0];
+                    let num =element.price.split('.')[0];
                     if(num > 50 && num < 100){
                         filteredProducts.push(element)
                     }
@@ -169,7 +170,7 @@ class AlternativeFilter extends HTMLElement{
             }
             else if(filterType === '100+'){
                 array.forEach(element=>{
-                    let num =element.price.split('$')[1].split('.')[0];
+                    let num =element.price.split('.')[0];
                     if(num > 100){
                         filteredProducts.push(element)
                     }
@@ -184,9 +185,7 @@ class AlternativeFilter extends HTMLElement{
                     
                 
             }
-        
-        
-        
+
         filteredProducts.forEach(product => {
             const productObj = document.createElement('card-element');
             productObj.setAttribute('name', product.name);

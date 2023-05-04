@@ -39,7 +39,7 @@ class cardElement extends HTMLElement {
                     <div class="product-description">
                         <p>${this.description}</p>
                     </div>
-                    <h4>${this.price}</h4>
+                    <h4>$${this.price}</h4>
                 </div>
                 <a href="${url}"><button class ="btn-primary">BUY NOW</button></a>
             </article>
