@@ -5,15 +5,170 @@ class CommentsComponent extends HTMLElement {
     const IMG_PATH = "/src/images/cata ima/perfilf.png";
      super();
 
-      
+      this.commentArray=[
+
+      ]
     
 
       
       
-      this.render();
+      
     }
 
+
+    connectedCallback(){
+      this.render();
+  }
+
+  
+
+  attributeChangedCallback(propName, oldvalue, newValue){
+      this[propName] = newValue;
+      this.render();
+
+  }
     render() {
+
+
+      
+    this.innerHTML+=`
+    <link rel="stylesheet" href="./styles.css">
+    
+<div class ="container-principal">
+
+<form id="comment-form">
+
+<div class"escribe-tu-comentario">
+<div class="profileone">
+<img src="/src/images/cata ima/perfilf.png" width="20%">
+        </div> 
+<div class="comment-tittle headline ">
+<p>Write your comment</p>
+        </div>
+
+        <div class ="formularios">
+        <div class ="comment-box">
+        <div class="comment-name button">
+        <div class="comment-nameop button">
+        <p>Name:</p>
+        <div class="input">
+<label for="name-input"></label> </input>
+<input type="text" id="name-input">
+<br>
+</div>
+</div>
+<div class ="comment-box-two">
+<div class="comment-opinion button">
+<p>Comment:</p>
+<textarea id="comment-input"></textarea>
+<br>
+
+        </div></div>
+
+
+<div class="envio ">
+<button type="submit">Send</button>
+</div>
+</form>
+
+
+
+        </div>
+    
+    
+    <div id="comment-box">
+    <div class="comment-tittle headline ">
+    <p>Comments</p>
+            </div>
+      </div>
+
+      <script type="module">
+              import css from './comments-component.css';
+              
+              const template = document.querySelector('#comments-template').content;
+            
+              class CommentsComponent extends HTMLElement {
+                constructor() {
+                  super();
+            
+                  const shadowRoot = this.attachShadow({ mode: 'open' });
+                  shadowRoot.appendChild(template.cloneNode(true));
+            
+                  const commentForm = shadowRoot.querySelector('#comment-form');
+                  const commentInput = shadowRoot.querySelector('#comment-input');
+                  const nameInput =  shadowRoot.querySelector('#name-input');
+                  const commentsContainer = shadowRoot.querySelector('#comments-container');
+            
+                  commentForm.addEventListener('submit', (event) => {
+                    event.preventDefault();
+                    const commentText = commentInput.value;
+                    if (commentText.trim() === '') {
+                      alert('Debes escribir un comentario');
+                      return;
+                    }
+                    const commentElement = document.createElement('div');
+                    commentElement.classList.add('comment');
+      
+                    const headerElement = document.createElement('h4');
+                    headerElement.textContent = nameText;
+                    commentElement.appendChild(headerElement);
+                    
+                    const imgElement = document.createElement('img');
+                    imgElement.src = '/src/images/cata ima/perfilf.png';
+                    commentElement.appendChild(imgElement);
+      
+                    commentElement.textContent = commentText;
+                    commentsContainer.appendChild(commentElement);
+                    commentInput.value = '';
+                  });
+            
+                  commentsContainer.addEventListener('click', (event) => {
+                    if (event.target.classList.contains('delete-comment')) {
+                      event.target.parentElement.remove();
+                    }
+                  });
+      
+                  commentsContainer.appendChild(commentElement);
+                }
+              }
+            
+              
+      </script>
+      
+    
+      `
+
+
+
+
+
+
+      
+      const commentBox = document.querySelector('#comment-box'); 
+      let commnetsInfo = this.commentArray.comments
+     
+      if (commnetsInfo.length > 0) {
+          commnetsInfo.forEach((comment) =>{
+              const commentObj = document.createElement('user-commment');
+              commentObj.setAttribute('image', comment.profileone);
+              commentObj.setAttribute('author', comment.author);
+              commentObj.setAttribute('comment', comment.text);
+              commentBox.append(commentObj);
+      
+          })
+      } else{
+        this.innerHTML +=`
+        <link rel="stylesheet" href="./styles.css">
+        <div class="comment-tittletwo title-2 ">
+        <p>No comments</p>
+                </div>`
+
+      }
+      
+      
+      
+
+      /* 
         this.innerHTML = `
       
         <link rel="stylesheet" href="./styles.css">
@@ -167,7 +322,7 @@ class CommentsComponent extends HTMLElement {
 
         
         
-
+/*
         commentForm.addEventListener('submit', (event) => {
           event.preventDefault();
           const nameText = nameInput.value.trim();
@@ -200,7 +355,7 @@ class CommentsComponent extends HTMLElement {
         });
 
 
-
+*/
 
 
 
@@ -234,6 +389,8 @@ function showComments(comments) {
 }
 
 */
+
+
     }
 }
 

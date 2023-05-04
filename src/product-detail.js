@@ -3,6 +3,7 @@ import "/src/Components/cardElement/cardElement.js";
 import "/src/Components/header/logiHeader.js";
 import "/src/Components/footer/logiFooter.js";
 import "/src/Components/comments/comments.js";
+import "/src/Components/user-comment/user-comment.js";
 
 const productContainer = document.querySelector('#products-container');
 const commentsContainer=document.getElementById("comments-container");
@@ -38,10 +39,15 @@ function organiceData(array){
         productObj.setAttribute('color1', product.colors[1]);
         productObj.setAttribute('type', product.type);
         productContainer.append(productObj);
+        
+        const commentObj = document.createElement('comments-component');
+        commentObj.commentArray=product;
+        commentsContainer.append(commentObj);
     }
-    });
+    }); //alooo :c holiii
 
-commentsContainer.innerHTML=`<comments-component> </comments-component>`
+//commentsContainer.innerHTML=`<comments-component> </comments-component>`
+
 
 }
 
