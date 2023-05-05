@@ -6,12 +6,16 @@ article {
     max-width: 550px;
 }
 
-.img1 {
-    display: block;
+.product-type {
+    font-size: 1.5rem;
 }
 
-.img2 {
-    display: none;
+.product .product-name {
+    font-size: 3rem;
+}
+
+.txt-body {
+    font-size: 1.3rem;
 }
 
 @media(max-width: 992px) {
@@ -24,24 +28,6 @@ article {
     .product .product-name {
         font-size: 2.5rem;
     }
-}
-
-#color1-btn {
-    margin-top: 8%;
-    margin-bottom: 4%;
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
-    border: 1px solid red;
-}
-
-#color2-btn {
-    margin-top: 8%;
-    margin-bottom: 4%;
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
-    border: 1px solid red;
 }
 
 #color2-btn:checked~.img2{
@@ -61,7 +47,7 @@ article {
     background-color: none;
     border-width: 2px;
     border-style: solid;
-    border-color: var( --main-bg-color-black);
+    border-color: var(--main-bg-color-black);
 }
 
 @media(max-width: 992px) {
