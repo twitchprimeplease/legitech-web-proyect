@@ -83,62 +83,55 @@ class CommentsComponent extends HTMLElement {
       </div>
 
       <script type="module">
-              import css from './comments-component.css';
               
-              const template = document.querySelector('#comments-template').content;
-            
-              class CommentsComponent extends HTMLElement {
-                constructor() {
-                  super();
-            
-                  const shadowRoot = this.attachShadow({ mode: 'open' });
-                  shadowRoot.appendChild(template.cloneNode(true));
-            
-                  const commentForm = shadowRoot.querySelector('#comment-form');
-                  const commentInput = shadowRoot.querySelector('#comment-input');
-                  const nameInput =  shadowRoot.querySelector('#name-input');
-                  const commentsContainer = shadowRoot.querySelector('#comments-container');
-            
-                  commentForm.addEventListener('submit', (event) => {
-                    event.preventDefault();
-                    const commentText = commentInput.value;
-                    if (commentText.trim() === '') {
-                      alert('Debes escribir un comentario');
-                      return;
-                    }
-                    const commentElement = document.createElement('div');
-                    commentElement.classList.add('comment');
-      
-                    const headerElement = document.createElement('h4');
-                    headerElement.textContent = nameText;
-                    commentElement.appendChild(headerElement);
-                    
-                    const imgElement = document.createElement('img');
-                    imgElement.src = '/src/images/cata ima/perfilf.png';
-                    commentElement.appendChild(imgElement);
-      
-                    commentElement.textContent = commentText;
-                    commentsContainer.appendChild(commentElement);
-                    commentInput.value = '';
-                  });
-            
-                  commentsContainer.addEventListener('click', (event) => {
-                    if (event.target.classList.contains('delete-comment')) {
-                      event.target.parentElement.remove();
-                    }
-                  });
-      
-                  commentsContainer.appendChild(commentElement);
-                }
-              }
-            
               
       </script>
       
+
     
       `
-
-
+      const commentsContainer = document.querySelector('#comment-box');
+      const commentForm = document.querySelector('#comment-form');
+      const nameInput = document.querySelector('#name-input');
+      const commentInput = document.querySelector('#comment-input');
+      commentForm.addEventListener('submit', (event) => {
+        console.log("uwu");
+        event.preventDefault();
+        const nameText = nameInput.value.trim();
+        const commentText = commentInput.value.trim();
+        if (nameText === '' || commentText === '') {
+          alert('Debes escribir un nombre y un comentario');
+          return;
+        }
+        const commentElement = document.createElement('div');
+        commentElement.classList.add('comment-container');
+        const profileName = document.createElement('div');
+        profileName.classList.add('profileone');
+        profileName.innerHTML = `<img src="/src/images/cata ima/perfilf.png" width="70%" >`
+        commentElement.appendChild(profileName);
+        const headerElement = document.createElement('div');
+        headerElement.classList.add('comment');
+        headerElement.classList.add('headline');
+        headerElement.innerHTML = `<div class="comment headline" data-author="${nameText}">
+        <p>${nameText}</p>
+        <div class="textco txt-body"> ${commentText}</div>
+    </div>`;
+        commentElement.appendChild(headerElement);
+        
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.classList.add('delete-comment');
+        commentElement.appendChild(deleteButton);
+        commentsContainer.appendChild(commentElement);
+        nameInput.value = '';
+        commentInput.value = '';
+      });
+      
+      commentsContainer.addEventListener('click', (event) => {
+        if (event.target.classList.contains('delete-comment')) {
+          event.target.parentElement.remove();
+        }
+      });
 
 
 
@@ -159,8 +152,8 @@ class CommentsComponent extends HTMLElement {
       } else{
         this.innerHTML +=`
         <link rel="stylesheet" href="./styles.css">
-        <div class="comment-tittletwo title-2 ">
-        <p>No comments</p>
+        <div class="comment-tittletwo button ">
+        <p>Be the first to comment!</p>
                 </div>`
 
       }
