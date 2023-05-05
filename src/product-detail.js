@@ -6,7 +6,6 @@ import "/src/Components/comments/comments.js";
 import "/src/Components/user-comment/user-comment.js";
 
 const productContainer = document.querySelector('detail-element');
-
 const commentsContainer=document.getElementById("comments-container");
 const searchFilter = document.querySelector('#category-filters');
 
