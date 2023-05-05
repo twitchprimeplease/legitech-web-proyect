@@ -1,3 +1,14 @@
+#back {
+    background-color: var(--neutral-color-one);
+    padding: 12px 18px 12px 18px;
+    border-width: 2px;
+}
+
+#forward {
+    background-color: var(--neutral-color-one);
+    padding: 12px 18px 12px 18px;
+    border-width: 2px;
+}
 
 #products-container{
     display: flex;

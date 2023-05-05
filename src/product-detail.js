@@ -5,12 +5,20 @@ import "/src/Components/footer/logiFooter.js";
 import "/src/Components/comments/comments.js";
 import "/src/Components/user-comment/user-comment.js";
 
-const productContainer = document.querySelector('#products-container');
+const productContainer = document.querySelector('detail-element');
 const commentsContainer=document.getElementById("comments-container");
 const searchFilter = document.querySelector('#category-filters');
 
 const url = window.location.search;
 const searchParas = new URLSearchParams(url);
+
+document.querySelector("#back").addEventListener("click", () => {
+    productContainer.backward();
+})
+
+document.querySelector("#forward").addEventListener("click", () => {
+    productContainer.forward();
+})
 
 let solicitude = searchParas.get("id").replace('"', "");
 
@@ -33,11 +41,10 @@ function organiceData(array){
         productObj.setAttribute('name', product.name);
         productObj.setAttribute('description', product.description);
         productObj.setAttribute('price', product.price);
-        productObj.setAttribute('image0', product.url[0]);
-        productObj.setAttribute('image1', product.url[1]);
-        productObj.setAttribute('color0', product.colors[0]);
-        productObj.setAttribute('color1', product.colors[1]);
+        productObj.setAttribute('image', product.url.join('$'));
+        productObj.setAttribute('color', product.colors.join('$'));
         productObj.setAttribute('type', product.type);
+        productObj.setAttribute('current', 0);
         productContainer.append(productObj);
         
         const commentObj = document.createElement('comments-component');
